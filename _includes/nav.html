@@ -1,0 +1,40 @@
+<header>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+
+      <a href="/" class="nav__logo" aria-label="Tangyslice Collective home">
+        <img
+          src="/assets/img/logo-tangyslice-light.webp"
+          alt="Tangyslice Collective"
+          width="210"
+          height="56"
+          class="nav__logo-img"
+        />
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="/manifesto" {% if page.url == '/manifesto/' %}aria-current="page"{% endif %}>Manifesto</a></li>
+        <li><a href="/services" {% if page.url == '/services/' %}aria-current="page"{% endif %}>Services</a></li>
+        <li><a href="/dispatch" {% if page.url contains '/dispatch' %}aria-current="page"{% endif %}>Dispatch</a></li>
+        <li><a href="/about" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
+        <li><a href="/contact" class="nav__cta" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a></li>
+      </ul>
+
+      <button class="nav__mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+    <div class="nav__drawer" id="nav-drawer" role="menu">
+      <a href="/manifesto" role="menuitem" {% if page.url == '/manifesto/' %}aria-current="page"{% endif %}>Manifesto</a>
+      <a href="/services" role="menuitem" {% if page.url == '/services/' %}aria-current="page"{% endif %}>Services</a>
+      <a href="/dispatch" role="menuitem" {% if page.url contains '/dispatch' %}aria-current="page"{% endif %}>Dispatch</a>
+      <a href="/about" role="menuitem" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a>
+      <a href="/contact" class="nav__cta" role="menuitem" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a>
+    </div>
+
+  </nav>
+</header>

@@ -1,0 +1,255 @@
+---
+layout: base
+---
+
+{% assign author = site.data.authors[page.author] %}
+
+{% comment %} ── Schema JSON-LD ── {% endcomment %}
+{% capture schema_block %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "{{ page.url | absolute_url }}#article",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page.description | default: site.description | jsonify }},
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+      "url": "{{ page.url | absolute_url }}",
+      "image": "{{ page.og_image | default: site.og_image | absolute_url }}",
+      "author": {
+        "@type": "Person",
+        "name": {{ author.name | default: page.author | jsonify }},
+        "url": {{ author.linkedin | default: site.url | jsonify }}
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Tangyslice Collective",
+        "url": "{{ site.url }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ '/assets/img/logo-tangyslice-light.webp' | absolute_url }}"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ page.url | absolute_url }}"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ site.url }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "The Dispatch",
+          "item": "{{ site.url }}/dispatch"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ page.title | jsonify }},
+          "item": "{{ page.url | absolute_url }}"
+        }
+      ]
+    }
+    {% if page.faq %}
+    ,{
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for item in page.faq %}
+        {
+          "@type": "Question",
+          "name": {{ item.q | jsonify }},
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": {{ item.a | jsonify }}
+          }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      ]
+    }
+    {% endif %}
+  ]
+}
+</script>
+{% endcapture %}
+{{ schema_block }}
+
+
+<!-- ───────── BREADCRUMB ───────── -->
+<nav class="post-breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="post-breadcrumb__list">
+      <li><a href="/">Home</a></li>
+      <li aria-hidden="true">›</li>
+      <li><a href="/dispatch">The dispatch</a></li>
+      <li aria-hidden="true">›</li>
+      <li aria-current="page">{{ page.title }}</li>
+    </ol>
+  </div>
+</nav>
+
+
+<!-- ───────── POST HEADER ───────── -->
+<header class="post-header">
+  <div class="container">
+    {% if page.category %}
+    <p class="post-header__eyebrow">{{ page.category }}</p>
+    {% endif %}
+    <h1 class="post-header__title">{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="post-header__desc">{{ page.description }}</p>
+    {% endif %}
+    <p class="post-header__meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% if author.name %}
+      <span class="post-header__meta-sep" aria-hidden="true">·</span>
+      <span>{{ author.name }}</span>
+      {% endif %}
+      {% if page.read_time %}
+      <span class="post-header__meta-sep" aria-hidden="true">·</span>
+      <span>{{ page.read_time }} min read</span>
+      {% endif %}
+    </p>
+  </div>
+</header>
+
+
+<!-- ───────── MOBILE TOC ───────── -->
+<div class="toc-mobile container" id="toc-mobile">
+  <button
+    class="toc-mobile__toggle"
+    aria-expanded="false"
+    aria-controls="toc-mobile-drawer"
+    id="toc-mobile-btn"
+  >
+    <span class="toc-mobile__label">In this post</span>
+    <span class="toc-mobile__chevron" aria-hidden="true">▼</span>
+  </button>
+  <div class="toc-mobile__drawer" id="toc-mobile-drawer" role="list">
+    <!-- Populated by JS from H2s in post body -->
+  </div>
+</div>
+
+
+<!-- ───────── POST BODY + SIDEBAR ───────── -->
+<div class="post-wrap container">
+  <div class="post-layout">
+
+    <!-- ── Content ── -->
+    <article class="post-content" id="post-content">
+      {{ content }}
+
+      <!-- FAQ rendered from front matter -->
+      {% if page.faq %}
+      <hr class="post-divider" />
+      <section id="frequently-asked-questions" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Frequently asked questions</h2>
+        {% for item in page.faq %}
+        <div class="faq-item">
+          <h3 class="faq-q">{{ item.q }}</h3>
+          <p class="faq-a">{{ item.a }}</p>
+        </div>
+        {% endfor %}
+      </section>
+      {% endif %}
+
+      <hr class="post-divider" />
+
+      <!-- CTA -->
+      {% include post-cta.html %}
+
+      <!-- Author -->
+      {% if author %}
+      <div class="post-author" aria-label="About the author">
+        <p class="post-author__label">Written by</p>
+        <div class="post-author__inner">
+          {% if author.avatar %}
+          <img
+            src="{{ author.avatar }}"
+            alt="{{ author.name }}"
+            class="post-author__avatar"
+            width="56"
+            height="56"
+            loading="lazy"
+          />
+          {% else %}
+          <div class="post-author__avatar post-author__avatar--initials" aria-hidden="true">
+            {{ author.name | split: ' ' | map: 'first' | join: '' }}
+          </div>
+          {% endif %}
+          <div class="post-author__body">
+            <p class="post-author__name">{{ author.name }}</p>
+            <p class="post-author__role">{{ author.role }}</p>
+            <p class="post-author__bio">{{ author.bio }}</p>
+            {% if author.linkedin %}
+            <a
+              href="{{ author.linkedin }}"
+              class="post-author__linkedin"
+              target="_blank"
+              rel="noopener noreferrer"
+            >LinkedIn →</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+      <!-- Read next -->
+      <aside class="read-next" aria-labelledby="read-next-heading">
+        <p class="read-next__label" id="read-next-heading">Read next</p>
+        {% assign current_url = page.url %}
+        {% assign count = 0 %}
+        {% for post in site.posts %}
+          {% unless post.url == current_url %}
+            {% if count < 3 %}
+            <a href="{{ post.url }}" class="read-next__item">
+              <div>
+                <p class="read-next__title">{{ post.title }}</p>
+                <p class="read-next__meta">
+                  {{ post.date | date: "%B %-d, %Y" }}
+                  {% assign post_author = site.data.authors[post.author] %}
+                  {% if post_author.name %} · {{ post_author.name }}{% endif %}
+                </p>
+              </div>
+              <span class="read-next__arrow" aria-hidden="true">→</span>
+            </a>
+            {% assign count = count | plus: 1 %}
+            {% endif %}
+          {% endunless %}
+        {% endfor %}
+      </aside>
+
+    </article>
+
+
+    <!-- ── Desktop sidebar TOC ── -->
+    <aside class="post-sidebar" aria-label="Table of contents" id="post-sidebar">
+      <nav class="sidebar-toc" aria-labelledby="toc-heading">
+        <p class="sidebar-toc__label" id="toc-heading">In this post</p>
+        <ol class="sidebar-toc__list" id="sidebar-toc-list">
+          <!-- Populated by JS -->
+        </ol>
+      </nav>
+    </aside>
+
+  </div>
+</div>
+
+
+<!-- ───────── FOOTER CTA STRIP ───────── -->
+<div style="border-top: 3px solid var(--dark);">
+  <div class="footer-cta">
+    <p class="footer-cta__text">Ready to get out<br/>of the complex?</p>
+    <a href="/contact" class="btn btn--dark">Let's talk →</a>
+  </div>
+</div>

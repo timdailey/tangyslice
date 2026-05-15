@@ -1,0 +1,197 @@
+---
+title: The dispatch
+description: "Reports from the post-inbound era. Published by Tangyslice Collective — writing about AI search visibility, dark funnel strategy, and what actually works for lean SMB tech teams."
+permalink: /dispatch/
+---
+
+<!-- ───────── MASTHEAD ───────── -->
+<section class="dispatch-masthead container" aria-labelledby="dispatch-title">
+  <div class="dispatch-masthead__inner">
+    <div class="dispatch-masthead__text">
+      <p class="dispatch-masthead__eyebrow">Published by Tangyslice Collective</p>
+      <h1 class="dispatch-masthead__title" id="dispatch-title">The dispatch</h1>
+      <p class="dispatch-masthead__desc">
+        Reports from the post-inbound era. We write about the things our clients are
+        dealing with right now — not trends, not frameworks, not content designed to rank
+        for keywords nobody searches. If it's in The Dispatch, it's because we've seen it
+        in the work and think it's worth saying plainly.
+      </p>
+    </div>
+    <div class="dispatch-masthead__subscribe">
+      <p class="dispatch-masthead__subscribe-label">Get the next issue</p>
+      <p class="dispatch-masthead__subscribe-desc">
+        New issues when the work warrants it. No nurture sequences. No scoring.
+      </p>
+      <form
+        class="subscribe-form"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+        aria-label="Subscribe to The Dispatch"
+      >
+        <input
+          type="email"
+          name="email"
+          class="subscribe-form__input"
+          placeholder="your@email.com"
+          required
+          aria-label="Email address"
+        />
+        <button type="submit" class="btn btn--dark">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- ───────── FEATURED ISSUE ───────── -->
+{% assign featured = site.posts.first %}
+{% if featured %}
+<section class="dispatch-featured" aria-labelledby="featured-heading">
+  <div class="container">
+    <p class="dispatch-featured__label">Latest issue</p>
+    <div class="dispatch-featured__inner">
+      {% if featured.og_image %}
+      <div class="dispatch-featured__image">
+        <img
+          src="{{ featured.og_image }}"
+          alt="{{ featured.title }}"
+          width="480"
+          height="270"
+          loading="eager"
+        />
+      </div>
+      {% else %}
+      <div class="dispatch-featured__image dispatch-featured__image--placeholder" aria-hidden="true"></div>
+      {% endif %}
+      <div class="dispatch-featured__content">
+        {% if featured.category %}
+        <p class="dispatch-beat">{{ featured.category }}</p>
+        {% endif %}
+        <h2 class="dispatch-featured__headline" id="featured-heading">
+          <a href="{{ featured.url }}">{{ featured.title }}</a>
+        </h2>
+        {% if featured.description %}
+        <p class="dispatch-featured__desc">{{ featured.description }}</p>
+        {% endif %}
+        <p class="dispatch-featured__meta">
+          <time datetime="{{ featured.date | date_to_xmlschema }}">{{ featured.date | date: "%B %-d, %Y" }}</time>
+          {% assign featured_author = site.data.authors[featured.author] %}
+          {% if featured_author.name %}
+          <span aria-hidden="true">·</span>
+          <span>{{ featured_author.name }}</span>
+          {% endif %}
+          {% if featured.read_time %}
+          <span aria-hidden="true">·</span>
+          <span>{{ featured.read_time }} min read</span>
+          {% endif %}
+        </p>
+        <a href="{{ featured.url }}" class="btn btn--dark">Read this issue →</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+
+<!-- ───────── ALL ISSUES ───────── -->
+<section class="dispatch-archive" aria-labelledby="archive-heading">
+  <div class="container">
+    <div class="dispatch-archive__header">
+      <h2 class="t-section" id="archive-heading">All issues</h2>
+      <p class="dispatch-archive__count">{{ site.posts | size }} issue{% if site.posts.size != 1 %}s{% endif %}</p>
+    </div>
+
+    {% if site.posts.size > 1 %}
+    <div class="dispatch-archive__list">
+      {% assign archive_posts = site.posts | shift %}
+      {% for post in archive_posts %}
+      {% assign post_author = site.data.authors[post.author] %}
+      <a href="{{ post.url }}" class="dispatch-archive__item">
+        <div class="dispatch-archive__thumb">
+          {% if post.og_image %}
+          <img
+            src="{{ post.og_image }}"
+            alt="{{ post.title }}"
+            width="160"
+            height="90"
+            loading="lazy"
+          />
+          {% else %}
+          <div class="dispatch-archive__thumb--placeholder" aria-hidden="true"></div>
+          {% endif %}
+        </div>
+        <div class="dispatch-archive__body">
+          {% if post.category %}
+          <p class="dispatch-beat">{{ post.category }}</p>
+          {% endif %}
+          <h3 class="dispatch-archive__headline">{{ post.title }}</h3>
+          {% if post.description %}
+          <p class="dispatch-archive__snippet">{{ post.description }}</p>
+          {% endif %}
+          <p class="dispatch-archive__meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+            {% if post_author.name %}
+            <span aria-hidden="true">·</span>
+            <span>{{ post_author.name }}</span>
+            {% endif %}
+            {% if post.read_time %}
+            <span aria-hidden="true">·</span>
+            <span>{{ post.read_time }} min read</span>
+            {% endif %}
+          </p>
+        </div>
+        <span class="dispatch-archive__arrow" aria-hidden="true">→</span>
+      </a>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if site.posts.size == 0 %}
+    <p class="dispatch-archive__empty">The first issue is coming. Subscribe above to get it when it lands.</p>
+    {% endif %}
+  </div>
+</section>
+
+
+<!-- ───────── BOTTOM SUBSCRIBE ───────── -->
+<section class="dispatch-subscribe surface--cream-dark" aria-labelledby="subscribe-heading">
+  <div class="container">
+    <div class="dispatch-subscribe__inner">
+      <div>
+        <h2 class="t-section" id="subscribe-heading">Get the next issue</h2>
+        <p class="dispatch-subscribe__desc">
+          New issues when the work warrants it — not on a schedule designed to hit a
+          content calendar. Subscribe and we'll send them directly.
+        </p>
+      </div>
+      <form
+        class="subscribe-form"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+        aria-label="Subscribe to The Dispatch"
+      >
+        <input
+          type="email"
+          name="email"
+          class="subscribe-form__input"
+          placeholder="your@email.com"
+          required
+          aria-label="Email address"
+        />
+        <button type="submit" class="btn btn--dark">Subscribe</button>
+      </form>
+      <p class="dispatch-subscribe__note">
+        No sequences. No scoring. Unsubscribe any time.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ───────── FOOTER CTA ───────── -->
+<div style="border-top: 3px solid var(--dark);">
+  <div class="footer-cta">
+    <p class="footer-cta__text">Ready to get out<br/>of the complex?</p>
+    <a href="/contact" class="btn btn--dark">Let's talk →</a>
+  </div>
+</div>

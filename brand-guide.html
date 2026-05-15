@@ -1,0 +1,1170 @@
+---
+layout: null
+permalink: /brand-guide/
+sitemap: false
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tangyslice Collective — Brand Guide v2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:         #E8E0CC;
+      --cream-dark: #E0D4B8;
+      --dark:       #1A0A06;
+      --red:        #BF2A1A;
+      --gold:       #E8D080;
+      --brown:      #6B4A20;
+      --rule:       #C8B898;
+      --white:      #FFFFFF;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; }
+
+    body {
+      background: #CEC4A8;
+      font-family: 'Inter', sans-serif;
+      padding: 48px 24px;
+      min-height: 100vh;
+    }
+
+    .page { max-width: 1000px; margin: 0 auto; }
+
+    /* ── Shared section ── */
+    .section {
+      background: var(--bg);
+      padding: 44px 48px;
+      margin-bottom: 3px;
+    }
+    .section--dark   { background: var(--dark); }
+    .section--ruled  { background: var(--cream-dark); }
+
+    .lbl {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brown);
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .lbl--light {
+      color: rgba(232,224,204,0.38);
+      border-bottom-color: rgba(232,224,204,0.1);
+    }
+    .lbl span {
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+      font-style: italic;
+      color: var(--rule);
+      font-size: 11px;
+    }
+
+    hr.div { height: 1px; background: var(--rule); border: none; margin: 28px 0; }
+
+    /* ── Cover ── */
+    .cover {
+      background: var(--dark);
+      padding: 60px 48px 48px;
+      margin-bottom: 3px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: end;
+    }
+    .cover__eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .cover__title {
+      font-family: 'Teko', sans-serif;
+      font-size: 72px;
+      font-weight: 700;
+      color: var(--bg);
+      line-height: 0.88;
+      letter-spacing: 0.02em;
+    }
+    .cover__title span { color: var(--red); }
+    .cover__sub {
+      font-family: 'Teko', sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: rgba(232,224,204,0.35);
+      letter-spacing: 0.12em;
+      margin-top: 8px;
+    }
+    .cover__meta {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      color: rgba(232,224,204,0.2);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 40px;
+    }
+    .cover__version {
+      text-align: right;
+    }
+    .cover__version-num {
+      font-family: 'Teko', sans-serif;
+      font-size: 80px;
+      font-weight: 700;
+      color: rgba(232,224,204,0.06);
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+    .cover__version-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      color: rgba(232,224,204,0.2);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-align: right;
+      margin-top: 8px;
+    }
+
+    /* ── Logo ── */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+    }
+    .logo-chip {
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .logo-chip__bg-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .logo-chip img {
+      height: 48px;
+      width: auto;
+      display: block;
+    }
+    .logo-chip--cream  { background: var(--bg); border: 1px solid var(--rule); }
+    .logo-chip--dark   { background: var(--dark); }
+    .logo-chip--white  { background: var(--white); }
+
+    /* Simulated logo for brand guide since we don't have the file here */
+    .logo-sim {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-sim__mark {
+      flex-shrink: 0;
+    }
+    .logo-sim__name {
+      font-family: 'Teko', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      line-height: 1;
+    }
+    .logo-sim__name span { display: block; }
+
+    /* Dark footer note */
+    .logo-note {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      color: var(--brown);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .logo-note--light { color: rgba(232,224,204,0.35); }
+
+    /* ── Palette ── */
+    .palette { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+    .swatch__color { height: 64px; border-radius: 2px; margin-bottom: 10px; }
+    .swatch__name  { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: var(--dark); margin-bottom: 2px; }
+    .swatch__token { font-family: 'Inter', sans-serif; font-size: 10px; color: var(--brown); margin-bottom: 2px; font-weight: 500; }
+    .swatch__hex   { font-family: 'Inter', sans-serif; font-size: 10px; color: var(--rule); margin-bottom: 6px; }
+    .swatch__use   { font-family: 'Inter', sans-serif; font-size: 9px; color: var(--brown); line-height: 1.55; }
+
+    .usage-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .usage-rule {
+      border-left: 3px solid var(--rule);
+      padding-left: 14px;
+    }
+    .usage-rule__title {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .usage-rule__body {
+      font-family: 'IBM Plex Serif', serif;
+      font-size: 12px;
+      color: var(--brown);
+      line-height: 1.65;
+    }
+
+    /* ── Typography ── */
+    .font-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; margin-bottom: 3px; }
+    .font-block {
+      padding: 24px;
+      background: var(--bg);
+      border: 1px solid var(--rule);
+    }
+    .font-block__role {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--brown);
+      margin-bottom: 6px;
+    }
+    .font-block__name {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    /* Case rules callout */
+    .case-rules {
+      background: rgba(191,42,26,0.06);
+      border-left: 3px solid var(--red);
+      padding: 16px 18px;
+      margin-top: 20px;
+    }
+    .case-rules__title {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 10px;
+    }
+    .case-rule-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(200,184,152,0.4);
+    }
+    .case-rule-row:last-child { border-bottom: none; }
+    .case-rule-row__type {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--brown);
+      width: 140px;
+      flex-shrink: 0;
+    }
+    .case-rule-row__example {
+      font-family: 'Teko', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--dark);
+      letter-spacing: 0.02em;
+    }
+    .case-rule-row__example--caps {
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Type specimen ── */
+    .specimen { display: flex; flex-direction: column; }
+    .specimen__row {
+      display: grid;
+      grid-template-columns: 160px 1fr 160px;
+      gap: 24px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
+    }
+    .specimen__row:last-child { border-bottom: none; }
+    .specimen__role {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brown);
+      padding-top: 3px;
+    }
+    .specimen__spec {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      color: var(--rule);
+      line-height: 1.65;
+      padding-top: 3px;
+      text-align: right;
+    }
+
+    /* ── Buttons ── */
+    .btn-grid { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .btn {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 12px 24px;
+      cursor: default;
+      display: inline-block;
+      line-height: 1;
+    }
+    .btn--dark   { background: var(--dark); color: var(--bg); }
+    .btn--red    { background: var(--red);  color: var(--white); }
+    .btn--cream  { background: var(--bg);   color: var(--red); border: 1px solid var(--rule); }
+    .btn--ghost  { background: transparent; color: var(--dark); border: 2px solid var(--dark); }
+    .btn--ghost-red { background: transparent; color: var(--red); border: 2px solid var(--red); }
+
+    /* ── Components ── */
+    .components-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+    .nav-demo {
+      background: var(--bg);
+      border: 1px solid var(--rule);
+      padding: 0 24px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-demo__logo {
+      font-family: 'Teko', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: 0.06em;
+      line-height: 1;
+    }
+    .nav-demo__logo span { color: var(--red); display: block; }
+    .nav-demo__links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+    .nav-demo__link {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dark);
+    }
+    .nav-demo__link--active { color: var(--red); }
+    .nav-demo__cta {
+      background: var(--red);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+    }
+
+    .card-demo {
+      background: var(--bg);
+      border: 0.5px solid var(--rule);
+      padding: 18px 20px;
+    }
+    .card-demo--dark { background: var(--dark); }
+    .card-demo__eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 8px;
+    }
+    .card-demo--dark .card-demo__eyebrow { color: var(--gold); }
+    .card-demo__title {
+      font-family: 'Teko', sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--dark);
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .card-demo--dark .card-demo__title { color: var(--bg); }
+    .card-demo__body {
+      font-family: 'IBM Plex Serif', serif;
+      font-size: 13px;
+      color: var(--dark);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .card-demo--dark .card-demo__body {
+      color: rgba(232,224,204,0.6);
+      font-style: italic;
+      font-size: 14px;
+    }
+    .card-demo__link {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--red);
+    }
+    .card-demo--dark .card-demo__link { color: rgba(232,224,204,0.4); }
+
+    .ind-demo { display: flex; flex-direction: column; }
+    .ind-demo__row {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .ind-demo__row:last-child { border-bottom: none; }
+    .ind-demo__num {
+      font-family: 'Teko', sans-serif;
+      font-size: 44px;
+      font-weight: 700;
+      color: var(--red);
+      line-height: 1;
+      border-bottom: 2.5px solid var(--red);
+      padding-bottom: 2px;
+      flex-shrink: 0;
+      width: 48px;
+    }
+    .ind-demo__title {
+      font-family: 'Teko', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--dark);
+      letter-spacing: 0.02em;
+      line-height: 1.2;
+    }
+
+    /* ── Footer demo ── */
+    .footer-demo {
+      background: var(--dark);
+      padding: 32px 28px 24px;
+    }
+    .footer-demo__top {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 24px;
+    }
+    .footer-demo__brand-name {
+      font-family: 'Teko', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--bg);
+      letter-spacing: 0.07em;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+    .footer-demo__tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      color: rgba(232,224,204,0.3);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .footer-demo__col-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(232,224,204,0.35);
+      margin-bottom: 10px;
+      display: block;
+    }
+    .footer-demo__link {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: rgba(232,224,204,0.6);
+      margin-bottom: 7px;
+    }
+    .footer-demo__bottom {
+      border-top: 1px solid rgba(232,224,204,0.08);
+      padding-top: 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      color: rgba(232,224,204,0.18);
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Brand voice ── */
+    .voice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3px; }
+    .voice-card { padding: 24px; }
+    .voice-card--do   { background: rgba(191,42,26,0.06); border-left: 3px solid var(--red); }
+    .voice-card--dont { background: rgba(200,184,152,0.15); border-left: 3px solid var(--rule); }
+    .voice-card__label {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .voice-card--do   .voice-card__label { color: var(--red); }
+    .voice-card--dont .voice-card__label { color: var(--rule); }
+    .voice-card__item {
+      font-family: 'IBM Plex Serif', serif;
+      font-size: 13px;
+      color: var(--dark);
+      line-height: 1.65;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(200,184,152,0.4);
+      display: flex;
+      gap: 10px;
+    }
+    .voice-card__item:last-child { border-bottom: none; }
+    .voice-card__item::before {
+      flex-shrink: 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+    }
+    .voice-card--do   .voice-card__item::before { content: '✓'; color: var(--red); }
+    .voice-card--dont .voice-card__item::before { content: '×'; color: var(--rule); }
+
+    /* ── Site footer ── */
+    .guide-footer {
+      background: var(--dark);
+      padding: 20px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .guide-footer__logo {
+      font-family: 'Teko', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--bg);
+      letter-spacing: 0.06em;
+    }
+    .guide-footer__logo span { color: var(--red); }
+    .guide-footer__note {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      color: rgba(232,224,204,0.22);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+
+  <!-- ── COVER ── -->
+  <div class="cover">
+    <div>
+      <p class="cover__eyebrow">Brand guide · Version 2.0</p>
+      <h1 class="cover__title">TANGY<span>SLICE</span></h1>
+      <p class="cover__sub">COLLECTIVE</p>
+      <p class="cover__meta">Teko · IBM Plex Serif · Inter &nbsp;·&nbsp; #E8E0CC · #1A0A06 · #BF2A1A · #E8D080 · #6B4A20 · #C8B898</p>
+    </div>
+    <div class="cover__version">
+      <div class="cover__version-num">v2</div>
+      <div class="cover__version-label">Updated 2025</div>
+    </div>
+  </div>
+
+
+  <!-- ── 01 LOGO ── -->
+  <div class="section">
+    <div class="lbl">01 — Logo <span>Use the provided .webp and .svg files. Do not recreate the mark.</span></div>
+
+    <div class="logo-grid">
+
+      <div class="logo-chip logo-chip--cream">
+        <div class="logo-sim">
+          <svg width="44" height="44" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polygon points="60,4 116,110 4,110" fill="#1A0A06"/>
+            <rect x="14" y="72" width="92" height="32" fill="#1A0A06"/>
+            <rect x="22" y="54" width="14" height="50" fill="#1A0A06"/>
+            <rect x="44" y="44" width="12" height="60" fill="#1A0A06"/>
+            <rect x="66" y="60" width="20" height="44" fill="#1A0A06"/>
+            <rect x="92" y="50" width="14" height="54" fill="#1A0A06"/>
+            <polygon points="60,4 116,110 72,110" fill="#BF2A1A" opacity="0.92"/>
+          </svg>
+          <div class="logo-sim__name" style="color:var(--dark);">
+            <span>TANGYSLICE</span>
+            <span style="color:var(--red);">COLLECTIVE</span>
+          </div>
+        </div>
+        <div class="logo-note">Primary — cream background</div>
+        <div style="font-family:'Inter',sans-serif;font-size:9px;color:var(--rule);margin-top:2px;">logo-tangyslice-light.webp</div>
+      </div>
+
+      <div class="logo-chip logo-chip--dark">
+        <div class="logo-sim">
+          <svg width="44" height="44" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polygon points="60,4 116,110 4,110" fill="#E8E0CC" opacity="0.88"/>
+            <rect x="14" y="72" width="92" height="32" fill="#1A0A06"/>
+            <rect x="22" y="54" width="14" height="50" fill="#1A0A06"/>
+            <rect x="44" y="44" width="12" height="60" fill="#1A0A06"/>
+            <rect x="66" y="60" width="20" height="44" fill="#1A0A06"/>
+            <rect x="92" y="50" width="14" height="54" fill="#1A0A06"/>
+            <polygon points="60,4 116,110 72,110" fill="#BF2A1A" opacity="0.95"/>
+          </svg>
+          <div class="logo-sim__name" style="color:#E8E0CC;">
+            <span>TANGYSLICE</span>
+            <span style="color:var(--gold);">COLLECTIVE</span>
+          </div>
+        </div>
+        <div class="logo-note logo-note--light">Reversed — dark background</div>
+        <div style="font-family:'Inter',sans-serif;font-size:9px;color:rgba(232,224,204,0.2);margin-top:2px;">CSS: filter: brightness(0) invert(1) opacity(0.75)</div>
+      </div>
+
+      <div class="logo-chip logo-chip--white">
+        <div class="logo-sim">
+          <svg width="44" height="44" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polygon points="60,4 116,110 4,110" fill="#1A0A06"/>
+            <rect x="14" y="72" width="92" height="32" fill="#1A0A06"/>
+            <rect x="22" y="54" width="14" height="50" fill="#1A0A06"/>
+            <rect x="44" y="44" width="12" height="60" fill="#1A0A06"/>
+            <rect x="66" y="60" width="20" height="44" fill="#1A0A06"/>
+            <rect x="92" y="50" width="14" height="54" fill="#1A0A06"/>
+            <polygon points="60,4 116,110 72,110" fill="#BF2A1A" opacity="0.92"/>
+          </svg>
+          <div class="logo-sim__name" style="color:var(--dark);">
+            <span>TANGYSLICE</span>
+            <span style="color:var(--red);">COLLECTIVE</span>
+          </div>
+        </div>
+        <div class="logo-note">On white</div>
+        <div style="font-family:'Inter',sans-serif;font-size:9px;color:var(--rule);margin-top:2px;">logo-tangyslice-light.webp</div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:20px;padding:16px 18px;background:rgba(200,184,152,0.2);border-left:3px solid var(--rule);">
+      <p style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--brown);margin-bottom:8px;">Logo usage rules</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <p style="font-family:'IBM Plex Serif',serif;font-size:12px;color:var(--dark);line-height:1.65;">Always use the provided logo files. Never recreate the mark, stretch the logo, change the colors, or add effects. Minimum display size: 120px wide.</p>
+        <p style="font-family:'IBM Plex Serif',serif;font-size:12px;color:var(--dark);line-height:1.65;">On dark backgrounds, apply <code style="font-family:monospace;font-size:11px;background:rgba(0,0,0,0.08);padding:1px 5px;">filter: brightness(0) invert(1) opacity(0.75)</code> in CSS to invert the logo for legibility.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 02 COLOR ── -->
+  <div class="section">
+    <div class="lbl">02 — Color palette</div>
+
+    <div class="palette">
+      <div>
+        <div class="swatch__color" style="background:#E8E0CC;border:0.5px solid var(--rule);"></div>
+        <p class="swatch__name">Background</p>
+        <p class="swatch__token">--bg</p>
+        <p class="swatch__hex">#E8E0CC</p>
+        <p class="swatch__use">Default page background. All light surface areas.</p>
+      </div>
+      <div>
+        <div class="swatch__color" style="background:#1A0A06;"></div>
+        <p class="swatch__name">Dark</p>
+        <p class="swatch__token">--dark</p>
+        <p class="swatch__hex">#1A0A06</p>
+        <p class="swatch__use">All headlines. Body copy. Primary buttons. Dark sections.</p>
+      </div>
+      <div>
+        <div class="swatch__color" style="background:#BF2A1A;"></div>
+        <p class="swatch__name">Red</p>
+        <p class="swatch__token">--red</p>
+        <p class="swatch__hex">#BF2A1A</p>
+        <p class="swatch__use">CTAs. Accent headlines. Links. Logo wordmark sub. Pull quote rules.</p>
+      </div>
+      <div>
+        <div class="swatch__color" style="background:#E8D080;"></div>
+        <p class="swatch__name">Gold</p>
+        <p class="swatch__token">--gold</p>
+        <p class="swatch__hex">#E8D080</p>
+        <p class="swatch__use">Dark background accents only. Never on cream or white.</p>
+      </div>
+      <div>
+        <div class="swatch__color" style="background:#6B4A20;"></div>
+        <p class="swatch__name">Brown</p>
+        <p class="swatch__token">--brown</p>
+        <p class="swatch__hex">#6B4A20</p>
+        <p class="swatch__use">Secondary text. Labels. Captions. Muted body copy.</p>
+      </div>
+      <div>
+        <div class="swatch__color" style="background:#C8B898;"></div>
+        <p class="swatch__name">Rule</p>
+        <p class="swatch__token">--rule</p>
+        <p class="swatch__hex">#C8B898</p>
+        <p class="swatch__use">Dividers. Borders. Tertiary text. Metadata.</p>
+      </div>
+    </div>
+
+    <div class="usage-row">
+      <div class="usage-rule">
+        <p class="usage-rule__title">Gold is dark-background only</p>
+        <p class="usage-rule__body">Gold (#E8D080) disappears on the cream background — it's too close in value. Reserve it exclusively for dark (#1A0A06) sections: eyebrow labels, accents, footer column headers. Never use it on cream or white.</p>
+      </div>
+      <div class="usage-rule">
+        <p class="usage-rule__title">Red is the sole action color</p>
+        <p class="usage-rule__body">Every interactive element — CTA buttons, text links, pull quote rules, accent headlines — uses red. It signals interaction and importance. Use it with intention, not decoration. Don't use red for body copy or general emphasis.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 03 TYPOGRAPHY ── -->
+  <div class="section">
+    <div class="lbl">03 — Typography system <span>Three fonts, three roles. Never mix roles.</span></div>
+
+    <div class="font-grid">
+
+      <div class="font-block">
+        <p class="font-block__role">Display & headings</p>
+        <p class="font-block__name">Teko — Google Fonts</p>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <div>
+            <p style="font-family:'Teko',sans-serif;font-size:44px;font-weight:700;color:var(--dark);line-height:0.92;letter-spacing:0.01em;">700 Hero</p>
+            <p style="font-family:'Inter',sans-serif;font-size:9px;color:var(--rule);margin-top:3px;">clamp(88px, 11vw, 128px) · all caps</p>
+          </div>
+          <hr class="div" style="margin:8px 0;">
+          <div>
+            <p style="font-family:'Teko',sans-serif;font-size:30px;font-weight:600;color:var(--dark);letter-spacing:0.02em;">600 Section title</p>
+            <p style="font-family:'Inter',sans-serif;font-size:9px;color:var(--rule);margin-top:3px;">clamp(32px, 3.5vw, 44px) · sentence case</p>
+          </div>
+          <hr class="div" style="margin:8px 0;">
+          <div>
+            <p style="font-family:'Teko',sans-serif;font-size:22px;font-weight:600;color:var(--dark);letter-spacing:0.02em;">600 Service name</p>
+            <p style="font-family:'Inter',sans-serif;font-size:9px;color:var(--rule);margin-top:3px;">clamp(26px, 2.8vw, 34px) · sentence case</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="font-block">
+        <p class="font-block__role">Body copy</p>
+        <p class="font-block__name">IBM Plex Serif — Google Fonts</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div>
+            <p style="font-family:'IBM Plex Serif',serif;font-size:14px;font-weight:400;color:var(--dark);line-height:1.8;">Regular 400 — All body copy, descriptions, service explanations, and sustained reading. Minimum 16px.</p>
+            <p style="font-family:'Inter',sans-serif;font-size:9px;color:var(--rule);margin-top:3px;">16–19px · line-height 1.75–1.85</p>
+          </div>
+          <hr class="div" style="margin:4px 0;">
+          <div>
+            <p style="font-family:'IBM Plex Serif',serif;font-size:14px;font-weight:600;color:var(--dark);line-height:1.6;">Semibold 600 — Inline emphasis within body copy when needed.</p>
+          </div>
+          <hr class="div" style="margin:4px 0;">
+          <div>
+            <p style="font-family:'IBM Plex Serif',serif;font-size:14px;font-style:italic;color:var(--dark);line-height:1.6;">"Italic 400 — Pull quotes, manifesto callouts, form notes."</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="font-block">
+        <p class="font-block__role">UI & micro-copy</p>
+        <p class="font-block__name">Inter — Google Fonts</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div>
+            <p style="font-family:'Inter',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--dark);">700 — Button labels, CTAs</p>
+            <p style="font-family:'Inter',sans-serif;font-size:9px;color:var(--rule);margin-top:3px;">13–14px · tracked · uppercase</p>
+          </div>
+          <hr class="div" style="margin:4px 0;">
+          <div>
+            <p style="font-family:'Inter',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--dark);">600 — Nav links, eyebrows</p>
+            <p style="font-family:'Inter',sans-serif;font-size:9px;color:var(--rule);margin-top:3px;">13px nav · 10px eyebrows · tracked · uppercase</p>
+          </div>
+          <hr class="div" style="margin:4px 0;">
+          <div>
+            <p style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:var(--brown);">500 — Metadata, dates, captions</p>
+            <p style="font-family:'Inter',sans-serif;font-size:9px;color:var(--rule);margin-top:3px;">10–12px · normal or slightly tracked</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="case-rules">
+      <p class="case-rules__title">Case rules — applied consistently across the site</p>
+      <div class="case-rule-row">
+        <p class="case-rule-row__type">Hero headlines</p>
+        <p class="case-rule-row__example case-rule-row__example--caps">THE LEADS AREN'T COMING BACK.</p>
+      </div>
+      <div class="case-rule-row">
+        <p class="case-rule-row__type">Page titles</p>
+        <p class="case-rule-row__example">Stop renting. Start building.</p>
+      </div>
+      <div class="case-rule-row">
+        <p class="case-rule-row__type">Section titles</p>
+        <p class="case-rule-row__example">What we build</p>
+      </div>
+      <div class="case-rule-row">
+        <p class="case-rule-row__type">Service names</p>
+        <p class="case-rule-row__example">Fractional CMO leadership</p>
+      </div>
+      <div class="case-rule-row">
+        <p class="case-rule-row__type">Eyebrow labels</p>
+        <p class="case-rule-row__example case-rule-row__example--caps" style="font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.18em;color:var(--red);">THE LEAD APOCALYPSE IS REAL.</p>
+      </div>
+      <div class="case-rule-row">
+        <p class="case-rule-row__type">Nav links</p>
+        <p class="case-rule-row__example case-rule-row__example--caps" style="font-family:'Inter',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.1em;">SERVICES</p>
+      </div>
+      <div class="case-rule-row">
+        <p class="case-rule-row__type">Button labels</p>
+        <p class="case-rule-row__example case-rule-row__example--caps" style="font-family:'Inter',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;">READ THE MANIFESTO →</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 04 TYPE SPECIMEN ── -->
+  <div class="section section--ruled">
+    <div class="lbl">04 — Type specimen — full hierarchy</div>
+
+    <div class="specimen">
+      <div class="specimen__row">
+        <p class="specimen__role">Eyebrow</p>
+        <p style="font-family:'Inter',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--red);">The lead apocalypse is real.</p>
+        <p class="specimen__spec">Inter 700 · 13px · tracked 0.16em · uppercase · --red</p>
+      </div>
+      <div class="specimen__row">
+        <p class="specimen__role">Hero H1 — dark</p>
+        <p style="font-family:'Teko',sans-serif;font-size:56px;font-weight:700;color:var(--dark);line-height:0.9;letter-spacing:0.01em;">THE LEADS AREN'T<br/>COMING BACK.</p>
+        <p class="specimen__spec">Teko 700 · clamp(88,11vw,128px) · all caps · --dark</p>
+      </div>
+      <div class="specimen__row">
+        <p class="specimen__role">Hero H2 — red</p>
+        <p style="font-family:'Teko',sans-serif;font-size:56px;font-weight:700;color:var(--red);line-height:0.9;letter-spacing:0.01em;">LET'S BUILD<br/>SOMETHING BETTER.</p>
+        <p class="specimen__spec">Teko 700 · clamp(88,11vw,128px) · all caps · --red</p>
+      </div>
+      <div class="specimen__row">
+        <p class="specimen__role">Page title</p>
+        <p style="font-family:'Teko',sans-serif;font-size:44px;font-weight:700;color:var(--dark);line-height:0.92;letter-spacing:0.01em;">Stop renting.<br/>Start building.</p>
+        <p class="specimen__spec">Teko 700 · clamp(68,9vw,108px) · sentence case · --dark</p>
+      </div>
+      <div class="specimen__row">
+        <p class="specimen__role">Section title</p>
+        <p style="font-family:'Teko',sans-serif;font-size:32px;font-weight:600;color:var(--dark);letter-spacing:0.02em;">What we build</p>
+        <p class="specimen__spec">Teko 600 · clamp(32,3.5vw,44px) · sentence case · --dark</p>
+      </div>
+      <div class="specimen__row">
+        <p class="specimen__role">Service name</p>
+        <p style="font-family:'Teko',sans-serif;font-size:26px;font-weight:600;color:var(--dark);letter-spacing:0.02em;">Fractional CMO leadership</p>
+        <p class="specimen__spec">Teko 600 · clamp(26,2.8vw,34px) · sentence case · --dark</p>
+      </div>
+      <div class="specimen__row">
+        <p class="specimen__role">Body copy</p>
+        <p style="font-family:'IBM Plex Serif',serif;font-size:16px;font-weight:400;color:var(--dark);line-height:1.82;max-width:480px;">The Agency/SaaS Industrial Complex was built for a buyer journey AI just ended. We build what comes next — custom, lean, and yours. Not a retainer. Not a tool rental. Something you own.</p>
+        <p class="specimen__spec">Plex Serif 400 · 16–19px · --dark · min 16px</p>
+      </div>
+      <div class="specimen__row">
+        <p class="specimen__role">Pull quote</p>
+        <p style="font-family:'IBM Plex Serif',serif;font-size:18px;font-style:italic;color:var(--dark);line-height:1.55;border-left:3px solid var(--red);padding-left:14px;max-width:440px;">"We are not a better agency. We are not a cheaper tool. We are the exit."</p>
+        <p class="specimen__spec">Plex Serif italic 400 · clamp(18,2.2vw,24px) · left rule --red</p>
+      </div>
+      <div class="specimen__row">
+        <p class="specimen__role">Nav link</p>
+        <p style="font-family:'Inter',sans-serif;font-size:13px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--dark);">Services</p>
+        <p class="specimen__spec">Inter 600 · 13px · tracked · uppercase · --dark</p>
+      </div>
+      <div class="specimen__row">
+        <p class="specimen__role">CTA — primary</p>
+        <span style="font-family:'Inter',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--bg);background:var(--dark);padding:11px 22px;display:inline-block;">Read the manifesto →</span>
+        <p class="specimen__spec">Inter 700 · 13px · --bg on --dark</p>
+      </div>
+      <div class="specimen__row">
+        <p class="specimen__role">CTA — red</p>
+        <span style="font-family:'Inter',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--bg);background:var(--red);padding:11px 22px;display:inline-block;">Talk to us →</span>
+        <p class="specimen__spec">Inter 700 · 13px · --bg on --red</p>
+      </div>
+      <div class="specimen__row">
+        <p class="specimen__role">Ghost button</p>
+        <span style="font-family:'Inter',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--dark);padding:10px 22px;display:inline-block;border:2px solid var(--dark);">See how we work →</span>
+        <p class="specimen__spec">Inter 700 · 13px · 2px border --dark</p>
+      </div>
+      <div class="specimen__row">
+        <p class="specimen__role">Metadata</p>
+        <p style="font-family:'Inter',sans-serif;font-size:12px;font-weight:500;color:var(--brown);letter-spacing:0.06em;">May 14, 2025  ·  Frank Days  ·  8 min read</p>
+        <p class="specimen__spec">Inter 500 · 10–12px · --brown</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 05 BUTTONS ── -->
+  <div class="section">
+    <div class="lbl">05 — Buttons <span>Inter 700 · 13px · tracked 0.1em · uppercase · padding 11–12px 22–24px</span></div>
+    <div class="btn-grid">
+      <div class="btn btn--dark">Read the manifesto →</div>
+      <div class="btn btn--red">Talk to us →</div>
+      <div class="btn btn--ghost">See how we work →</div>
+      <div class="btn btn--ghost-red">View services →</div>
+    </div>
+    <div style="background:var(--dark);padding:24px;margin-top:12px;">
+      <div class="btn-grid">
+        <div class="btn btn--cream">Read the manifesto →</div>
+        <div class="btn" style="background:transparent;color:var(--bg);border:2px solid rgba(232,224,204,0.4);font-family:'Inter',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:11px 22px;">On dark surfaces →</div>
+      </div>
+    </div>
+    <p style="font-family:'IBM Plex Serif',serif;font-size:13px;font-style:italic;color:var(--brown);margin-top:14px;line-height:1.6;">Primary action on any page: use dark or red filled button. Secondary action: ghost button. On dark backgrounds: use cream filled or ghost with light border.</p>
+  </div>
+
+
+  <!-- ── 06 COMPONENTS ── -->
+  <div class="section">
+    <div class="lbl">06 — Components in context</div>
+    <div class="components-grid">
+
+      <div>
+        <p style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--brown);margin-bottom:10px;">Navigation bar</p>
+        <div class="nav-demo">
+          <div class="nav-demo__logo">TANGYSLICE<span style="color:var(--red);">COLLECTIVE</span></div>
+          <div class="nav-demo__links">
+            <span class="nav-demo__link">Manifesto</span>
+            <span class="nav-demo__link nav-demo__link--active">Services</span>
+            <span class="nav-demo__link">Dispatch</span>
+            <span class="nav-demo__link">About</span>
+            <span class="nav-demo__cta">Contact</span>
+          </div>
+        </div>
+        <p style="font-family:'Inter',sans-serif;font-size:9px;color:var(--rule);margin-top:8px;">Height: 72px · sticky · border-bottom: 1px solid --rule · active link in --red</p>
+      </div>
+
+      <div>
+        <p style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--brown);margin-bottom:10px;">Service card — light surface</p>
+        <div class="card-demo">
+          <p class="card-demo__eyebrow">01 —</p>
+          <h3 class="card-demo__title">Custom AI workflows</h3>
+          <p class="card-demo__body">Built around how your business actually operates. Owned by you, not rented from a vendor.</p>
+          <p class="card-demo__link">View services →</p>
+        </div>
+      </div>
+
+      <div>
+        <p style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--brown);margin-bottom:10px;">Pull quote — dark surface</p>
+        <div class="card-demo card-demo--dark">
+          <p class="card-demo__eyebrow">From the manifesto</p>
+          <p class="card-demo__body">"We are not a better agency. We are not a cheaper tool. We are the exit."</p>
+          <p class="card-demo__link">Read the full manifesto →</p>
+        </div>
+      </div>
+
+      <div>
+        <p style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:var(--brown);margin-bottom:10px;">Numbered indictment — sentence case</p>
+        <div class="ind-demo">
+          <div class="ind-demo__row">
+            <span class="ind-demo__num">01</span>
+            <p class="ind-demo__title">The complex sold you a system for a world that no longer exists.</p>
+          </div>
+          <div class="ind-demo__row">
+            <span class="ind-demo__num">02</span>
+            <p class="ind-demo__title">The lead apocalypse wasn't a slump — it was structural.</p>
+          </div>
+          <div class="ind-demo__row">
+            <span class="ind-demo__num">03</span>
+            <p class="ind-demo__title">The tools were never built for your business.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- ── 07 DARK SECTION ── -->
+  <div class="section section--dark">
+    <div class="lbl lbl--light">07 — Dark surface treatment</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;">
+      <div>
+        <p style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">The indictment</p>
+        <h2 style="font-family:'Teko',sans-serif;font-size:34px;font-weight:700;color:var(--bg);line-height:0.95;letter-spacing:0.02em;margin-bottom:16px;">The leads aren't coming back.</h2>
+        <p style="font-family:'IBM Plex Serif',serif;font-size:15px;color:rgba(232,224,204,0.6);line-height:1.78;">Agencies, tools, retainers, funnels — all optimized for a buyer journey that AI just ended. And the complex kept charging you anyway.</p>
+      </div>
+      <div style="border-left:1px solid rgba(232,224,204,0.08);padding-left:32px;">
+        <p style="font-family:'Inter',sans-serif;font-size:9px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(232,224,204,0.28);margin-bottom:16px;">Color behavior on dark</p>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:20px;height:20px;background:var(--bg);border-radius:2px;flex-shrink:0;"></div>
+            <p style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(232,224,204,0.55);">--bg (#E8E0CC) — primary text on dark</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:20px;height:20px;background:var(--gold);border-radius:2px;flex-shrink:0;"></div>
+            <p style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(232,224,204,0.55);">--gold (#E8D080) — accent labels on dark only</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:20px;height:20px;background:var(--red);border-radius:2px;flex-shrink:0;"></div>
+            <p style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(232,224,204,0.55);">--red (#BF2A1A) — used on both light and dark</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:20px;height:20px;background:rgba(232,224,204,0.07);border:0.5px solid rgba(232,224,204,0.12);border-radius:2px;flex-shrink:0;"></div>
+            <p style="font-family:'Inter',sans-serif;font-size:11px;color:rgba(232,224,204,0.55);">Dividers — rgba(--bg, 0.1) on dark</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 08 FOOTER COMPONENT ── -->
+  <div class="section">
+    <div class="lbl">08 — Footer component</div>
+    <div class="footer-demo">
+      <div class="footer-demo__top">
+        <div>
+          <p class="footer-demo__brand-name">TANGYSLICE<br/><span style="color:var(--red);">COLLECTIVE</span></p>
+          <p class="footer-demo__tagline" style="margin-top:6px;">Built for what's next.</p>
+          <p class="footer-demo__tagline" style="margin-top:3px;">Based in Massachusetts.</p>
+        </div>
+        <div>
+          <span class="footer-demo__col-label">Navigation</span>
+          <a class="footer-demo__link">Manifesto</a>
+          <a class="footer-demo__link">Services</a>
+          <a class="footer-demo__link">Dispatch</a>
+          <a class="footer-demo__link">About</a>
+          <a class="footer-demo__link">Contact</a>
+        </div>
+        <div>
+          <span class="footer-demo__col-label">Company</span>
+          <a class="footer-demo__link">Privacy policy</a>
+          <a class="footer-demo__link">Terms of service</a>
+        </div>
+        <div>
+          <span class="footer-demo__col-label">Contact</span>
+          <a class="footer-demo__link">Book a call ↗</a>
+          <a class="footer-demo__link">Send us a note</a>
+        </div>
+      </div>
+      <p class="footer-demo__bottom">© 2025 Tangyslice Collective LLC. All rights reserved.</p>
+    </div>
+    <p style="font-family:'IBM Plex Serif',serif;font-size:12px;font-style:italic;color:var(--brown);margin-top:12px;line-height:1.6;">Contact column: "Book a call" opens external calendar link in new tab. "Send us a note" links to /contact. No email address listed publicly. Location moved to brand column.</p>
+  </div>
+
+
+  <!-- ── 09 BRAND VOICE ── -->
+  <div class="section">
+    <div class="lbl">09 — Brand voice & tone</div>
+
+    <div style="margin-bottom:20px;">
+      <p style="font-family:'IBM Plex Serif',serif;font-size:16px;color:var(--dark);line-height:1.8;max-width:680px;">The Tangyslice voice is direct, principled, and wry. It sounds like someone who has been inside the machine, understands exactly how it works, and decided to build something better. It never hedges. It never oversells. It says the uncomfortable thing plainly.</p>
+    </div>
+
+    <div class="voice-grid">
+      <div class="voice-card voice-card--do">
+        <p class="voice-card__label">Write like this</p>
+        <div class="voice-card__item">The leads aren't coming back. Not because your campaigns got worse — because the buyer journey AI ended.</div>
+        <div class="voice-card__item">We don't take on every engagement. Not because we're precious — because the work only holds up when there's a genuine fit.</div>
+        <div class="voice-card__item">No proposal theater. No 40-page decks. A plain document that says what we'd do, how long it would take, and what it would cost.</div>
+        <div class="voice-card__item">You were right. The new buyer doesn't want to be nurtured. They want to be understood.</div>
+      </div>
+      <div class="voice-card voice-card--dont">
+        <p class="voice-card__label">Not like this</p>
+        <div class="voice-card__item">We leverage cutting-edge AI solutions to optimize your marketing ROI across all channels.</div>
+        <div class="voice-card__item">Our team of experts delivers best-in-class fractional CMO services tailored to your unique needs.</div>
+        <div class="voice-card__item">We're passionate about helping brands unlock their full potential in the digital landscape.</div>
+        <div class="voice-card__item">Schedule a free discovery call to explore how we can accelerate your growth journey.</div>
+      </div>
+    </div>
+
+    <hr class="div">
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:4px;">
+      <div>
+        <p style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--dark);margin-bottom:8px;">Declarative</p>
+        <p style="font-family:'IBM Plex Serif',serif;font-size:13px;color:var(--brown);line-height:1.65;">Make statements. Don't qualify everything. "The funnel is dead." Not "The funnel may no longer be as effective as it once was."</p>
+      </div>
+      <div>
+        <p style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--dark);margin-bottom:8px;">Specific</p>
+        <p style="font-family:'IBM Plex Serif',serif;font-size:13px;color:var(--brown);line-height:1.65;">Name the enemy. Name the buyer. Name the problem. "Lean SMB tech teams" is more credible than "growing companies."</p>
+      </div>
+      <div>
+        <p style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--dark);margin-bottom:8px;">Honest</p>
+        <p style="font-family:'IBM Plex Serif',serif;font-size:13px;color:var(--brown);line-height:1.65;">Say who you don't work with. Say what you actually do. Acknowledge the limits. Trust is built by saying the thing other firms won't.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ── 10 SITE ARCHITECTURE ── -->
+  <div class="section section--ruled">
+    <div class="lbl">10 — Site architecture</div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:3px;">
+      <div style="background:var(--bg);border:1px solid var(--rule);padding:18px;">
+        <p style="font-family:'Teko',sans-serif;font-size:18px;font-weight:600;color:var(--dark);letter-spacing:0.04em;margin-bottom:6px;">Home</p>
+        <p style="font-family:'Inter',sans-serif;font-size:10px;color:var(--brown);line-height:1.6;">Hero · Indictment · What we build · Who this is for · Pull quote · Dispatch · Footer CTA</p>
+      </div>
+      <div style="background:var(--bg);border:1px solid var(--rule);padding:18px;">
+        <p style="font-family:'Teko',sans-serif;font-size:18px;font-weight:600;color:var(--dark);letter-spacing:0.04em;margin-bottom:6px;">Manifesto</p>
+        <p style="font-family:'Inter',sans-serif;font-size:10px;color:var(--brown);line-height:1.6;">Full founding manifesto as a standalone editorial page.</p>
+      </div>
+      <div style="background:var(--bg);border:1px solid var(--rule);padding:18px;">
+        <p style="font-family:'Teko',sans-serif;font-size:18px;font-weight:600;color:var(--dark);letter-spacing:0.04em;margin-bottom:6px;">Services</p>
+        <p style="font-family:'Inter',sans-serif;font-size:10px;color:var(--brown);line-height:1.6;">5 services · how they pair · who we don't work with</p>
+      </div>
+      <div style="background:var(--bg);border:1px solid var(--rule);padding:18px;">
+        <p style="font-family:'Teko',sans-serif;font-size:18px;font-weight:600;color:var(--dark);letter-spacing:0.04em;margin-bottom:6px;">Dispatch</p>
+        <p style="font-family:'Inter',sans-serif;font-size:10px;color:var(--brown);line-height:1.6;">Publication index · featured issue · archive · subscribe</p>
+      </div>
+      <div style="background:var(--bg);border:1px solid var(--rule);padding:18px;">
+        <p style="font-family:'Teko',sans-serif;font-size:18px;font-weight:600;color:var(--dark);letter-spacing:0.04em;margin-bottom:6px;">About</p>
+        <p style="font-family:'Inter',sans-serif;font-size:10px;color:var(--brown);line-height:1.6;">Origin story · Frank Days · Tim Dailey · beliefs · how we work</p>
+      </div>
+      <div style="background:var(--bg);border:1px solid var(--rule);padding:18px;">
+        <p style="font-family:'Teko',sans-serif;font-size:18px;font-weight:600;color:var(--dark);letter-spacing:0.04em;margin-bottom:6px;">Contact</p>
+        <p style="font-family:'Inter',sans-serif;font-size:10px;color:var(--brown);line-height:1.6;">Book a call (primary) · backup contact form · qualification copy</p>
+      </div>
+      <div style="background:var(--bg);border:1px solid var(--rule);padding:18px;">
+        <p style="font-family:'Teko',sans-serif;font-size:18px;font-weight:600;color:var(--dark);letter-spacing:0.04em;margin-bottom:6px;">How we work</p>
+        <p style="font-family:'Inter',sans-serif;font-size:10px;color:var(--brown);line-height:1.6;">Principles · engagement model · Fractional CMO · pricing philosophy</p>
+      </div>
+      <div style="background:var(--bg);border:1px solid var(--rule);padding:18px;">
+        <p style="font-family:'Teko',sans-serif;font-size:18px;font-weight:600;color:var(--dark);letter-spacing:0.04em;margin-bottom:6px;">Tools</p>
+        <p style="font-family:'Inter',sans-serif;font-size:10px;color:var(--brown);line-height:1.6;">Client-built tools · free tools · proof of capability</p>
+      </div>
+    </div>
+    <div style="margin-top:16px;padding:14px 18px;background:rgba(200,184,152,0.2);border-left:3px solid var(--rule);">
+      <p style="font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--brown);margin-bottom:6px;">Built with Jekyll on GitHub Pages</p>
+      <p style="font-family:'IBM Plex Serif',serif;font-size:12px;color:var(--dark);line-height:1.65;">Shared layout in <code style="font-family:monospace;font-size:11px;background:rgba(0,0,0,0.06);padding:1px 4px;">_layouts/base.html</code>. Nav and footer as Jekyll includes. CSS in <code style="font-family:monospace;font-size:11px;background:rgba(0,0,0,0.06);padding:1px 4px;">assets/css/main.css</code>. JS in <code style="font-family:monospace;font-size:11px;background:rgba(0,0,0,0.06);padding:1px 4px;">assets/js/main.js</code>. Dispatch posts in <code style="font-family:monospace;font-size:11px;background:rgba(0,0,0,0.06);padding:1px 4px;">_posts/</code>. Max width: 1500px.</p>
+    </div>
+  </div>
+
+
+  <!-- ── GUIDE FOOTER ── -->
+  <div class="guide-footer">
+    <p class="guide-footer__logo">TANGY<span>SLICE</span> COLLECTIVE</p>
+    <p class="guide-footer__note">Brand guide v2.0 · Confidential · 2025</p>
+  </div>
+
+
+</div>
+</body>
+</html>
