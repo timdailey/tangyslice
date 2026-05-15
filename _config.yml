@@ -1,0 +1,14 @@
+title: Tangyslice Collective
+description: Built for what's next.
+url: ""
+baseurl: ""
+
+# Build
+markdown: kramdown
+permalink: /:title/
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
