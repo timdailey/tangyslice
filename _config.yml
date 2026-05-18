@@ -5,14 +5,13 @@
 # Site identity
 title:       Tangyslice Collective
 description: "The Agency/SaaS Industrial Complex was built for a buyer journey AI just ended. We build what comes next — custom AI workflows, fractional CMO leadership, and tools you own."
-url:         "https://tangyslice.com"
-baseurl:     ""
+url:         "https://timdailey.github.io"
+baseurl:     "/tangyslice"
 
 # Default social share image (1200x630px)
-# Place at assets/img/og-default.jpg
-og_image: "/assets/img/og-default.jpg"
+og_image: "/assets/img/og-default.webp"
 
-# Author defaults (used in Dispatch post meta)
+# Author defaults
 author:
   name: Tangyslice Collective
 
@@ -28,13 +27,11 @@ collections:
 
 # Default front matter
 defaults:
-  # All pages
   - scope:
       path: ""
       type: pages
     values:
       layout: base
-  # All Dispatch posts
   - scope:
       path: ""
       type: posts

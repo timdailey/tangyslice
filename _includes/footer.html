@@ -4,9 +4,9 @@
     <div class="footer__top">
 
       <div>
-        <a href="/" class="footer__brand-logo" aria-label="Tangyslice Collective home">
+        <a href="{{ '/' | relative_url }}" class="footer__brand-logo" aria-label="Tangyslice Collective home">
           <img
-            src="/assets/img/logo-tangyslice-light.webp"
+            src="{{ '/assets/img/logo-tangyslice-light.webp' | relative_url }}"
             alt="Tangyslice Collective"
             width="180"
             height="48"
@@ -19,23 +19,23 @@
 
       <nav class="footer__col" aria-label="Footer navigation">
         <span class="footer__col-label">Navigation</span>
-        <a href="/manifesto">Manifesto</a>
-        <a href="/services">Services</a>
-        <a href="/dispatch">Dispatch</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <a href="{{ '/manifesto' | relative_url }}">Manifesto</a>
+        <a href="{{ '/services' | relative_url }}">Services</a>
+        <a href="{{ '/dispatch' | relative_url }}">Dispatch</a>
+        <a href="{{ '/about' | relative_url }}">About</a>
+        <a href="{{ '/contact' | relative_url }}">Contact</a>
       </nav>
 
       <div class="footer__col">
         <span class="footer__col-label">Company</span>
-        <a href="/privacy">Privacy policy</a>
-        <a href="/terms">Terms of service</a>
+        <a href="{{ '/privacy' | relative_url }}">Privacy policy</a>
+        <a href="{{ '/terms' | relative_url }}">Terms of service</a>
       </div>
 
       <div class="footer__col">
         <span class="footer__col-label">Contact</span>
         <a href="https://calendly.com/tangyslice" target="_blank" rel="noopener noreferrer">Book a call</a>
-        <a href="/contact">Send us a note</a>
+        <a href="{{ '/contact' | relative_url }}">Send us a note</a>
       </div>
 
     </div>

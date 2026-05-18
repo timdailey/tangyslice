@@ -38,7 +38,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/assets/css/main.css" />
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
 </head>
 
 <body class="{% if page.url == '/' %}page--home{% else %}page--{{ page.url | remove: '/' | remove: '.html' | replace: '/', '-' }}{% endif %}">
@@ -51,6 +51,6 @@
 
   {% include footer.html %}
 
-  <script src="/assets/js/main.js"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
