@@ -981,6 +981,46 @@ h1, h2, h3,
 
 
 /* ==========================================================================
+   PAGE HEADER — shared across services, about, contact, how we work
+   ========================================================================== */
+
+.page-header {
+  border-bottom: 3px solid var(--dark);
+  padding: var(--space-10) 0 var(--space-9);
+}
+
+.page-header__eyebrow {
+  font-family: var(--font-ui);
+  font-size: var(--text-ui-sm);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: var(--space-4);
+}
+
+.page-header__title {
+  font-family: var(--font-display);
+  font-size: var(--text-page);
+  font-weight: 700;
+  line-height: 0.92;
+  letter-spacing: 0.01em;
+  color: var(--dark);
+  margin-bottom: var(--space-6);
+}
+
+.page-header__title span { color: var(--red); }
+
+.page-header__body {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  line-height: 1.82;
+  color: var(--dark);
+  max-width: 640px;
+}
+
+
+/* ==========================================================================
    SERVICES PAGE — replace section 10 in main.css
    ========================================================================== */
 
