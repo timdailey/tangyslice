@@ -349,11 +349,18 @@ h1, h2, h3,
    ========================================================================== */
 
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 200;
   background: var(--bg);
   border-bottom: 1px solid var(--rule);
+}
+
+/* Compensate for fixed nav so content isn't hidden underneath */
+body {
+  padding-top: var(--nav-height);
 }
 
 .nav__inner {
@@ -1021,7 +1028,7 @@ h1, h2, h3,
 
 
 /* ==========================================================================
-   SERVICES PAGE — replace section 10 in main.css
+   SERVICES PAGE — section 10
    ========================================================================== */
 
 /* ── Service jump nav ── */
