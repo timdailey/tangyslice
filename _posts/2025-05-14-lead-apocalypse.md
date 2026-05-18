@@ -5,7 +5,7 @@ description: "Most marketing teams are treating the pipeline slowdown as a campa
 date: 2025-05-14
 author: frank-days
 read_time: 8
-og_image: /assets/img/dispatch/lead-apocalypse.webp
+og_image: /assets/img/dispatch/dispatch-test-thumb.webp
 faq:
   - q: "Is the lead apocalypse affecting all industries equally?"
     a: "No — B2B tech is experiencing it earliest and most acutely. AI search adoption is highest among technical buyers, which means SaaS and software companies feel the shift before professional services or e-commerce."
