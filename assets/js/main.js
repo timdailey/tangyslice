@@ -194,3 +194,33 @@
     }
   });
 })();
+
+
+/* ── Services jump nav scroll spy ───────────────────────────────────────── */
+
+(function () {
+  const navLinks = document.querySelectorAll('.svc-nav__link');
+  if (!navLinks.length) return;
+
+  const sections = Array.from(navLinks).map(function (link) {
+    const id = link.getAttribute('href').replace('#', '');
+    return document.getElementById(id);
+  }).filter(Boolean);
+
+  if (!sections.length || !('IntersectionObserver' in window)) return;
+
+  const observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          navLinks.forEach(function (l) { l.classList.remove('is-active'); });
+          const active = document.querySelector('.svc-nav__link[href="#' + entry.target.id + '"]');
+          if (active) active.classList.add('is-active');
+        }
+      });
+    },
+    { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+  );
+
+  sections.forEach(function (s) { observer.observe(s); });
+})();
