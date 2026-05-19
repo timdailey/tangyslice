@@ -1,0 +1,208 @@
+---
+title: Contact
+description: "Let's find out if we're a fit. Book a 30-minute call with Tangyslice Collective — no deck, no pitch, just an honest conversation about whether we can help."
+permalink: /contact/
+---
+
+<!-- ───────── PAGE HEADER ───────── -->
+<div class="page-header">
+  <div class="container">
+    <p class="page-header__eyebrow">Let's find out if we're a fit.</p>
+    <h1 class="page-header__title">Start with<br/><span>a conversation.</span></h1>
+    <p class="page-header__body">We don't take every engagement that comes our way. Not because we're precious — because the work only holds up when there's a genuine match. The fastest way to find out is 30 minutes.</p>
+  </div>
+</div>
+
+
+<!-- ───────── BOOK A MEETING — primary ───────── -->
+<section class="contact-book" aria-labelledby="book-heading">
+  <div class="container">
+    <div class="contact-book__inner">
+
+      <div class="contact-book__left">
+        <p class="contact-label">Book a call</p>
+        <h2 class="contact-book__title" id="book-heading">30 minutes.<br/>No deck. No pitch.</h2>
+        <p class="contact-book__body">We'll ask about where you are, what you've tried, and what's not working. You can ask us anything. If there's a fit, we'll follow up within 48 hours with a plain document — what we'd do, how long it would take, what it would cost.</p>
+        <a href="https://calendly.com/tangyslice" target="_blank" rel="noopener noreferrer" class="btn btn--red">Book a 30-minute call →</a>
+        <p class="contact-book__note">No commitment required. We respond to every booking.</p>
+      </div>
+
+      <div class="contact-book__right">
+        <p class="contact-label">What happens next</p>
+        <ol class="contact-expect">
+          <li class="contact-expect__item">
+            <span class="contact-expect__num" aria-hidden="true">01</span>
+            <div>
+              <p class="contact-expect__title">Before the call</p>
+              <p class="contact-expect__body">Nothing required. Come as you are. If you want to share context in advance — a brief, a few bullet points — we'll read it. But we don't require anything.</p>
+            </div>
+          </li>
+          <li class="contact-expect__item">
+            <span class="contact-expect__num" aria-hidden="true">02</span>
+            <div>
+              <p class="contact-expect__title">On the call</p>
+              <p class="contact-expect__body">We'll ask what's broken and what a good outcome looks like. We'll tell you honestly whether we can help. If it's not a fit, we'll say so and try to point you somewhere useful.</p>
+            </div>
+          </li>
+          <li class="contact-expect__item">
+            <span class="contact-expect__num" aria-hidden="true">03</span>
+            <div>
+              <p class="contact-expect__title">After the call</p>
+              <p class="contact-expect__body">If there's a fit, we'll follow up within 48 hours. No proposal theater. No 40-page decks. A plain document that says what we'd do, how long it would take, and what it would cost.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ───────── QUALIFICATION ───────── -->
+<section class="contact-qual surface--cream-dark" aria-labelledby="qual-heading">
+  <div class="container">
+    <div class="contact-qual__inner">
+      <div class="contact-qual__left">
+        <h2 class="contact-qual__title" id="qual-heading">Is this the right call for you?</h2>
+        <p class="contact-qual__sub">A few signals that the conversation is worth having.</p>
+      </div>
+      <ul class="contact-qual__list">
+        <li>You're at a lean tech company with a small marketing team making real decisions without enterprise budgets</li>
+        <li>Your pipeline has slowed and you're not sure if it's a campaign problem or something structural</li>
+        <li>You're skeptical of agencies and tired of being sold the same playbook</li>
+        <li>You need senior marketing thinking but aren't ready to hire a full-time CMO</li>
+        <li>You want to understand what AI search actually means for your go-to-market</li>
+        <li>You're ready to build something you own rather than rent something that keeps you dependent</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ───────── CONTACT FORM — secondary ───────── -->
+<section class="contact-form-section" aria-labelledby="form-heading">
+  <div class="container">
+    <div class="contact-form-section__inner">
+
+      <div class="contact-form-section__context">
+        <p class="contact-label">Send a note</p>
+        <h2 class="contact-form-section__title" id="form-heading">Rather write first?</h2>
+        <p class="contact-form-section__body">That's fine. We'll get back to you within one business day. We read every message and respond to the ones where we think we can genuinely help.</p>
+        <p class="contact-form-section__privacy">We don't add form submissions to marketing lists. Your information is used only to respond to your message.</p>
+      </div>
+
+      <form
+        class="contact-form"
+        action="https://YOUR_N8N_INSTANCE/webhook/YOUR_WEBHOOK_ID"
+        method="POST"
+        aria-label="Contact form"
+      >
+        <input type="hidden" name="_redirect" value="{{ '/contact/thank-you' | absolute_url }}" />
+        <div class="contact-form__row">
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="first-name">First name <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="first-name"
+              name="first_name"
+              class="contact-form__input"
+              placeholder="First name"
+              required
+              autocomplete="given-name"
+            />
+          </div>
+          <div class="contact-form__field">
+            <label class="contact-form__label" for="last-name">Last name <span aria-hidden="true">*</span></label>
+            <input
+              type="text"
+              id="last-name"
+              name="last_name"
+              class="contact-form__input"
+              placeholder="Last name"
+              required
+              autocomplete="family-name"
+            />
+          </div>
+        </div>
+
+        <div class="contact-form__field">
+          <label class="contact-form__label" for="company">Company <span aria-hidden="true">*</span></label>
+          <input
+            type="text"
+            id="company"
+            name="company"
+            class="contact-form__input"
+            placeholder="Company name"
+            required
+            autocomplete="organization"
+          />
+        </div>
+
+        <div class="contact-form__field">
+          <label class="contact-form__label" for="email">Work email <span aria-hidden="true">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="contact-form__input"
+            placeholder="you@company.com"
+            required
+            autocomplete="email"
+          />
+        </div>
+
+        <div class="contact-form__field">
+          <label class="contact-form__label" for="message">What's the problem you're trying to solve? <span aria-hidden="true">*</span></label>
+          <textarea
+            id="message"
+            name="message"
+            class="contact-form__textarea"
+            placeholder="Tell us what's going on..."
+            rows="5"
+            required
+          ></textarea>
+        </div>
+
+        <div class="contact-form__field">
+          <label class="contact-form__label" for="referral">How did you hear about us? <span class="contact-form__optional">Optional</span></label>
+          <input
+            type="text"
+            id="referral"
+            name="referral"
+            class="contact-form__input"
+            placeholder="Word of mouth, LinkedIn, etc."
+            autocomplete="off"
+          />
+        </div>
+
+        <div>
+          <button type="submit" class="btn btn--dark">Send it →</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ───────── NOT READY YET ───────── -->
+<div class="contact-notready">
+  <div class="container">
+    <p class="contact-notready__text">Not ready to talk yet? That's okay.</p>
+    <div class="contact-notready__links">
+      <a href="{{ '/manifesto' | relative_url }}" class="t-link">Read the manifesto →</a>
+      <a href="{{ '/dispatch' | relative_url }}" class="t-link">Browse the dispatch →</a>
+      <a href="{{ '/services' | relative_url }}" class="t-link">See our services →</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ───────── FOOTER CTA ───────── -->
+<div style="border-top: 3px solid var(--dark);">
+  <div class="footer-cta">
+    <p class="footer-cta__text">Ready to get out<br/>of the complex?</p>
+    <a href="https://calendly.com/tangyslice" target="_blank" rel="noopener noreferrer" class="btn btn--dark">Book a call →</a>
+  </div>
+</div>

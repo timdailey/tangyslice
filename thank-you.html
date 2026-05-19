@@ -1,0 +1,118 @@
+---
+title: Message received
+description: "Thanks for reaching out to Tangyslice Collective. We'll be in touch within one business day."
+permalink: /contact/thank-you/
+---
+
+<!-- ───────── CONFIRMATION ───────── -->
+<div class="ty-header">
+  <div class="container">
+    <p class="ty-header__eyebrow">Message received</p>
+    <h1 class="ty-header__title">We'll be in<br/><span>touch soon.</span></h1>
+    <p class="ty-header__body">Your message is in. We read every one and respond to the ones where we think we can genuinely help — usually within one business day.</p>
+  </div>
+</div>
+
+
+<!-- ───────── BOOK A CALL PROMPT ───────── -->
+<section class="ty-book" aria-labelledby="ty-book-heading">
+  <div class="container">
+    <div class="ty-book__inner">
+
+      <div class="ty-book__left">
+        <p class="ty-book__label">Rather talk sooner?</p>
+        <h2 class="ty-book__title" id="ty-book-heading">Skip the wait.<br/>Book a call directly.</h2>
+        <p class="ty-book__body">If you'd rather not wait for an email back, you can book a 30-minute call right now. We'll cover the same ground — what's broken, whether we can help, and what working together would actually look like.</p>
+        <a href="https://calendly.com/tangyslice" target="_blank" rel="noopener noreferrer" class="btn btn--red">Book a 30-minute call →</a>
+        <p class="ty-book__note">No commitment. We respond to every booking.</p>
+      </div>
+
+      <div class="ty-book__right">
+        <p class="ty-book__label">What to expect</p>
+        <ol class="ty-expect">
+          <li class="ty-expect__item">
+            <span class="ty-expect__num" aria-hidden="true">01</span>
+            <div>
+              <p class="ty-expect__title">We'll review your message</p>
+              <p class="ty-expect__body">Every submission gets read by Frank or Tim — not a VA, not an automated filter. We'll take a look and figure out whether there's a genuine fit.</p>
+            </div>
+          </li>
+          <li class="ty-expect__item">
+            <span class="ty-expect__num" aria-hidden="true">02</span>
+            <div>
+              <p class="ty-expect__title">You'll hear back within one business day</p>
+              <p class="ty-expect__body">If we think we can help, we'll reply with a few questions or suggest a call. If it's not a fit, we'll say so and try to point you in a useful direction.</p>
+            </div>
+          </li>
+          <li class="ty-expect__item">
+            <span class="ty-expect__num" aria-hidden="true">03</span>
+            <div>
+              <p class="ty-expect__title">If there's a fit, we move fast</p>
+              <p class="ty-expect__body">No lengthy proposal process. A plain document — what we'd do, how long it would take, what it would cost. From first conversation to scoped engagement in days, not weeks.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ───────── LATEST FROM THE DISPATCH ───────── -->
+{% if site.posts.size > 0 %}
+<section class="ty-dispatch" aria-labelledby="ty-dispatch-heading">
+  <div class="container">
+    <div class="ty-dispatch__header">
+      <h2 class="t-section" id="ty-dispatch-heading">While you wait</h2>
+      <a href="{{ '/dispatch' | relative_url }}" class="t-link">All issues →</a>
+    </div>
+    <p class="ty-dispatch__sub">Latest from The Dispatch — reports from the post-inbound era.</p>
+    <div class="ty-dispatch__grid">
+      {% for post in site.posts limit:3 %}
+      {% assign post_author = site.data.authors[post.author] %}
+      <article class="ty-dispatch__item">
+        {% if post.og_image %}
+        <div class="ty-dispatch__thumb">
+          <img
+            src="{{ post.og_image | relative_url }}"
+            alt="{{ post.title }}"
+            width="320"
+            height="180"
+            loading="lazy"
+          />
+        </div>
+        {% else %}
+        <div class="ty-dispatch__thumb ty-dispatch__thumb--placeholder" aria-hidden="true"></div>
+        {% endif %}
+        {% if post.category %}
+        <p class="dispatch-beat">{{ post.category }}</p>
+        {% endif %}
+        <h3 class="ty-dispatch__headline">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+        {% if post.description %}
+        <p class="ty-dispatch__snippet">{{ post.description }}</p>
+        {% endif %}
+        <p class="ty-dispatch__meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+          {% if post_author.name %}
+          <span aria-hidden="true">·</span>
+          <span>{{ post_author.name }}</span>
+          {% endif %}
+        </p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+
+<!-- ───────── FOOTER CTA ───────── -->
+<div style="border-top: 3px solid var(--dark);">
+  <div class="footer-cta">
+    <p class="footer-cta__text">Ready to get out<br/>of the complex?</p>
+    <a href="{{ '/contact' | relative_url }}" class="btn btn--dark">Back to contact →</a>
+  </div>
+</div>
