@@ -66,5 +66,10 @@
   {% include footer.html %}
 
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+
+  {% if page.turnstile %}
+  <!-- Cloudflare Turnstile — loaded only on pages that set turnstile: true -->
+  <script src="https://challenges.cloudflare.com/turnstile/v1/api.js" async defer></script>
+  {% endif %}
 </body>
 </html>
