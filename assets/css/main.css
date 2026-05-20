@@ -927,7 +927,7 @@ body {
   font-size: var(--text-body-lg);
   line-height: 1.85;
   color: var(--dark);
-  max-width: 680px;
+  max-width: 900px;
 }
 
 /* Homepage pull quote */
@@ -1300,7 +1300,7 @@ body {
   font-size: var(--text-body-lg);
   line-height: 1.82;
   color: rgba(232, 224, 204, 0.6);
-  max-width: 680px;
+  max-width: 900px;
   margin-bottom: var(--space-9);
 }
 
@@ -1893,7 +1893,7 @@ body {
   font-size: var(--text-body-lg);
   color: var(--brown);
   line-height: 1.72;
-  max-width: 680px;
+  max-width: 900px;
   margin-bottom: var(--space-5);
 }
 
@@ -2459,7 +2459,7 @@ body {
 }
 
 .about-section__body {
-  max-width: 720px;
+  max-width: 900px;
 }
 
 .about-section__body p {
@@ -3412,7 +3412,7 @@ body {
   font-size: clamp(15px, 1.5vw, 18px);
   line-height: 1.88;
   color: var(--dark);
-  max-width: 720px;
+  max-width: 900px;
   margin-bottom: var(--space-5);
 }
 
@@ -3562,7 +3562,7 @@ body {
   font-size: clamp(15px, 1.5vw, 18px);
   line-height: 1.85;
   color: rgba(232, 224, 204, 0.6);
-  max-width: 680px;
+  max-width: 900px;
   margin-bottom: var(--space-7);
 }
 
@@ -3581,7 +3581,7 @@ body {
   font-size: clamp(15px, 1.5vw, 18px);
   line-height: 1.85;
   color: rgba(232, 224, 204, 0.6);
-  max-width: 680px;
+  max-width: 900px;
 }
 
 /* ── Closing — cream ── */
