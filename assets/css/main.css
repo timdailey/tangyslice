@@ -270,6 +270,55 @@ h1, h2, h3,
 
 .t-link:hover { opacity: 0.72; }
 
+/* ── Inline text links — prose copy ── */
+.text-link,
+.post-body a,
+.post-content a,
+.mani-body a,
+.about-section__body a,
+.contact-form-section__context a,
+.contact-form__check a,
+.svc__desc a,
+.founder__bio a,
+.faq-a a,
+.dispatch-masthead__desc a {
+  color: var(--red);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+
+.text-link:hover,
+.post-body a:hover,
+.post-content a:hover,
+.mani-body a:hover,
+.about-section__body a:hover,
+.contact-form-section__context a:hover,
+.contact-form__check a:hover,
+.svc__desc a:hover,
+.founder__bio a:hover,
+.faq-a a:hover,
+.dispatch-masthead__desc a:hover {
+  color: var(--dark);
+  text-decoration-color: var(--red);
+}
+
+/* Dark surface text links */
+.surface--dark .text-link,
+.surface--dark .post-content a,
+.surface--dark .faq-a a {
+  color: var(--gold);
+  text-decoration-color: rgba(232, 224, 204, 0.3);
+}
+
+.surface--dark .text-link:hover,
+.surface--dark .post-content a:hover,
+.surface--dark .faq-a a:hover {
+  color: var(--bg);
+  text-decoration-color: var(--gold);
+}
+
 /* Dark surface overrides */
 .surface--dark .t-eyebrow  { color: var(--gold); }
 .surface--dark .t-section  { color: var(--dark-text-primary); }
@@ -2010,15 +2059,6 @@ body {
   margin-bottom: var(--space-2);
 }
 
-.post-content a {
-  color: var(--red);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: opacity var(--transition-fast);
-}
-
-.post-content a:hover { opacity: 0.72; }
-
 .post-content strong { font-weight: 600; }
 .post-content em     { font-style: italic; }
 
@@ -2890,6 +2930,64 @@ body {
   min-height: 130px;
   line-height: 1.72;
 }
+
+/* ── Acceptance checkbox ── */
+.contact-form__check {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  line-height: 1.65;
+  color: var(--dark);
+}
+
+.contact-form__checkbox {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  border: 1.5px solid var(--dark);
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+  position: relative;
+}
+
+.contact-form__checkbox:checked {
+  background: var(--dark);
+  border-color: var(--dark);
+}
+
+.contact-form__checkbox:checked::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 9px;
+  border: 2px solid var(--bg);
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.contact-form__checkbox:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 2px;
+}
+
+.contact-form__check a {
+  color: var(--red);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: opacity var(--transition-fast);
+}
+
+.contact-form__check a:hover { opacity: 0.72; }
 
 /* ── Not ready yet ── */
 .contact-notready {

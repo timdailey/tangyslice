@@ -105,7 +105,7 @@ permalink: /contact/
             <input
               type="text"
               id="first-name"
-              name="first_name"
+              name="firstname"
               class="contact-form__input"
               placeholder="First name"
               required
@@ -117,7 +117,7 @@ permalink: /contact/
             <input
               type="text"
               id="last-name"
-              name="last_name"
+              name="lastname"
               class="contact-form__input"
               placeholder="Last name"
               required
@@ -164,16 +164,18 @@ permalink: /contact/
           ></textarea>
         </div>
 
+
+
         <div class="contact-form__field">
-          <label class="contact-form__label" for="referral">How did you hear about us? <span class="contact-form__optional">Optional</span></label>
-          <input
-            type="text"
-            id="referral"
-            name="referral"
-            class="contact-form__input"
-            placeholder="Word of mouth, LinkedIn, etc."
-            autocomplete="off"
-          />
+          <label class="contact-form__check">
+            <input
+              type="checkbox"
+              name="acceptance"
+              class="contact-form__checkbox"
+              required
+            />
+            <span>I accept the <a class="text-link" href="{{ '/terms' | relative_url }}">terms of service</a> and <a class="text-link" href="{{ '/privacy' | relative_url }}">privacy policy</a>.</span>
+          </label>
         </div>
 
         <div>
