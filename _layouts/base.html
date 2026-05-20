@@ -39,6 +39,16 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+
+    <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RS9GZLZ65"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-8RS9GZLZ65');
+  </script>
+
 </head>
 
 <body class="{% if page.url == '/' %}page--home{% else %}page--{{ page.url | remove: '/' | remove: '.html' | replace: '/', '-' }}{% endif %}">
