@@ -5,8 +5,8 @@
 # Site identity
 title:       Tangyslice Collective
 description: "The Agency/SaaS Industrial Complex was built for a buyer journey AI just ended. We build what comes next — custom AI workflows, fractional CMO leadership, and tools you own."
-url:         "https://timdailey.github.io"
-baseurl:     "/tangyslice"
+url: "https://tangyslice.com"
+baseurl: ""
 
 # Default social share image (1200x630px)
 og_image: "/assets/img/og-default.webp"
