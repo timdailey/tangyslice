@@ -17,28 +17,6 @@ permalink: /dispatch/
         in the work and think it's worth saying plainly.
       </p>
     </div>
-    <div class="dispatch-masthead__subscribe">
-      <p class="dispatch-masthead__subscribe-label">Get the next issue</p>
-      <p class="dispatch-masthead__subscribe-desc">
-        New issues when the work warrants it. No nurture sequences. No scoring.
-      </p>
-      <form
-        class="subscribe-form"
-        action="https://formspree.io/f/YOUR_FORM_ID"
-        method="POST"
-        aria-label="Subscribe to The Dispatch"
-      >
-        <input
-          type="email"
-          name="email"
-          class="subscribe-form__input"
-          placeholder="your@email.com"
-          required
-          aria-label="Email address"
-        />
-        <button type="submit" class="btn btn--dark">Subscribe</button>
-      </form>
-    </div>
   </div>
 </section>
 
@@ -147,43 +125,8 @@ permalink: /dispatch/
     {% endif %}
 
     {% if site.posts.size == 0 %}
-    <p class="dispatch-archive__empty">The first issue is coming. Subscribe above to get it when it lands.</p>
+    <p class="dispatch-archive__empty">The first issue is coming soon.</p>
     {% endif %}
-  </div>
-</section>
-
-
-<!-- ───────── BOTTOM SUBSCRIBE ───────── -->
-<section class="dispatch-subscribe surface--cream-dark" aria-labelledby="subscribe-heading">
-  <div class="container">
-    <div class="dispatch-subscribe__inner">
-      <div>
-        <h2 class="t-section" id="subscribe-heading">Get the next issue</h2>
-        <p class="dispatch-subscribe__desc">
-          New issues when the work warrants it — not on a schedule designed to hit a
-          content calendar. Subscribe and we'll send them directly.
-        </p>
-      </div>
-      <form
-        class="subscribe-form"
-        action="https://formspree.io/f/YOUR_FORM_ID"
-        method="POST"
-        aria-label="Subscribe to The Dispatch"
-      >
-        <input
-          type="email"
-          name="email"
-          class="subscribe-form__input"
-          placeholder="your@email.com"
-          required
-          aria-label="Email address"
-        />
-        <button type="submit" class="btn btn--dark">Subscribe</button>
-      </form>
-      <p class="dispatch-subscribe__note">
-        No sequences. No scoring. Unsubscribe any time.
-      </p>
-    </div>
   </div>
 </section>
 
