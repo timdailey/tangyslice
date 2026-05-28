@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /proposals/
+
+Sitemap: https://tangyslice.com/sitemap.xml
