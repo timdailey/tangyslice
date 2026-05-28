@@ -1985,7 +1985,7 @@ body {
 
 .post-layout {
   display: grid;
-  grid-template-columns: 1fr 240px;
+  grid-template-columns: 1fr 310px;
   gap: 0;
   align-items: start;
 }
@@ -2144,6 +2144,12 @@ body {
 
 .post-cta__btn:hover { opacity: 0.88; }
 
+/* Override post-content cascade inside the CTA box */
+.post-content .post-cta__eyebrow { color: var(--gold); }
+.post-content .post-cta__title   { color: var(--bg); }
+.post-content .post-cta__body    { color: rgba(232, 224, 204, 0.65); }
+.post-content .post-cta__btn     { color: var(--white); text-decoration: none; }
+
 /* ── Author block ── */
 .post-author {
   background: var(--cream-dark);
@@ -2189,22 +2195,26 @@ body {
 
 .post-author__name {
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: 30px;
   font-weight: 600;
   color: var(--dark);
   letter-spacing: 0.02em;
-  margin-bottom: var(--space-1);
+  margin-bottom: 2px;
 }
 
 .post-author__role {
   font-family: var(--font-ui);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--red);
   margin-bottom: var(--space-3);
 }
+
+/* Override post-content paragraph cascade inside author block */
+.post-content .post-author__name { margin-bottom: 2px; }
+.post-content .post-author__role { margin-bottom: var(--space-3); }
 
 .post-author__bio {
   font-family: var(--font-body);
@@ -2312,7 +2322,7 @@ body {
 .sidebar-toc__link {
   display: block;
   font-family: var(--font-ui);
-  font-size: 12px;
+  font-size: 14px;
   color: var(--brown);
   line-height: 1.45;
   padding: var(--space-2) 0;

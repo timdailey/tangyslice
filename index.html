@@ -150,44 +150,26 @@ description: "The Agency/SaaS Industrial Complex was built for a buyer journey A
 
   <div class="col-3">
 
+    {% for post in site.posts limit:3 %}
+    {% assign post_author = site.data.authors[post.author] %}
     <article class="col-item">
-      <!-- Replace with real image -->
+      {% if post.og_image %}
+      <img src="{{ post.og_image }}" alt="{{ post.title }}" class="dispatch-thumb" width="400" height="225" loading="lazy" />
+      {% else %}
       <div class="dispatch-thumb" aria-hidden="true"></div>
-      <p class="dispatch-beat">Strategy</p>
+      {% endif %}
+      {% if post.category %}<p class="dispatch-beat">{{ post.category }}</p>{% endif %}
       <h3 class="dispatch-headline">
-        <a href="/blog/ai-search-new-demand-gen">AI search is the new demand gen</a>
+        <a href="{{ post.url }}">{{ post.title }}</a>
       </h3>
-      <p class="dispatch-snippet">
-        Why visibility is a moving target — and how to hit it anyway.
-      </p>
-      <time class="dispatch-date" datetime="2025-05-02">May 2, 2025  ·  Tim Dailey</time>
+      {% if post.description %}
+      <p class="dispatch-snippet">{{ post.description }}</p>
+      {% endif %}
+      <time class="dispatch-date" datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%B %-d, %Y" }}{% if post_author.name %} · {{ post_author.name }}{% endif %}
+      </time>
     </article>
-
-    <article class="col-item">
-      <!-- Replace with real image -->
-      <div class="dispatch-thumb" aria-hidden="true"></div>
-      <p class="dispatch-beat">Systems</p>
-      <h3 class="dispatch-headline">
-        <a href="/blog/end-of-the-mql">The end of the MQL</a>
-      </h3>
-      <p class="dispatch-snippet">
-        How AI destroyed the old funnel — and what replaces it.
-      </p>
-      <time class="dispatch-date" datetime="2025-05-07">May 7, 2025  ·  Frank Days</time>
-    </article>
-
-    <article class="col-item">
-      <!-- Replace with real image -->
-      <div class="dispatch-thumb" aria-hidden="true"></div>
-      <p class="dispatch-beat">Operations</p>
-      <h3 class="dispatch-headline">
-        <a href="/blog/build-once-own-forever">Build once. Own it forever.</a>
-      </h3>
-      <p class="dispatch-snippet">
-        Why your tools should compound, not compromise.
-      </p>
-      <time class="dispatch-date" datetime="2025-04-24">Apr 24, 2025  ·  Tim Dailey</time>
-    </article>
+    {% endfor %}
 
   </div>
 </section>
