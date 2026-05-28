@@ -1,5 +1,5 @@
 ---
-layout: dispatch-post
+layout: blog-post
 title: "The lead apocalypse isn't coming. It already happened."
 description: "Most marketing teams are treating the pipeline slowdown as a campaign problem. Here's why that diagnosis is wrong — and what the data shows about where buyers actually went."
 date: 2025-05-14

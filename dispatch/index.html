@@ -1,7 +1,7 @@
 ---
-title: The dispatch
+title: Blog
 description: "Reports from the post-inbound era. Published by Tangyslice Collective — writing about AI search visibility, dark funnel strategy, and what actually works for lean SMB tech teams."
-permalink: /dispatch/
+permalink: /blog/
 ---
 
 <!-- ───────── MASTHEAD ───────── -->
@@ -9,11 +9,11 @@ permalink: /dispatch/
   <div class="dispatch-masthead__inner">
     <div class="dispatch-masthead__text">
       <p class="dispatch-masthead__eyebrow">Published by Tangyslice Collective</p>
-      <h1 class="dispatch-masthead__title" id="dispatch-title">The dispatch</h1>
+      <h1 class="dispatch-masthead__title" id="dispatch-title">Blog</h1>
       <p class="dispatch-masthead__desc">
         Reports from the post-inbound era. We write about the things our clients are
         dealing with right now — not trends, not frameworks, not content designed to rank
-        for keywords nobody searches. If it's in The Dispatch, it's because we've seen it
+        for keywords nobody searches. If it's on the blog, it's because we've seen it
         in the work and think it's worth saying plainly.
       </p>
     </div>
@@ -26,7 +26,7 @@ permalink: /dispatch/
 {% if featured %}
 <section class="dispatch-featured" aria-labelledby="featured-heading">
   <div class="container">
-    <p class="dispatch-featured__label">Latest issue</p>
+    <p class="dispatch-featured__label">Latest post</p>
     <div class="dispatch-featured__inner">
       {% if featured.og_image %}
       <div class="dispatch-featured__image">
@@ -63,7 +63,7 @@ permalink: /dispatch/
           <span>{{ featured.read_time }} min read</span>
           {% endif %}
         </p>
-        <a href="{{ featured.url }}" class="btn btn--dark">Read this issue →</a>
+        <a href="{{ featured.url }}" class="btn btn--dark">Read this post →</a>
       </div>
     </div>
   </div>
@@ -75,8 +75,8 @@ permalink: /dispatch/
 <section class="dispatch-archive" aria-labelledby="archive-heading">
   <div class="container">
     <div class="dispatch-archive__header">
-      <h2 class="t-section" id="archive-heading">All issues</h2>
-      <p class="dispatch-archive__count">{{ site.posts | size }} issue{% if site.posts.size != 1 %}s{% endif %}</p>
+      <h2 class="t-section" id="archive-heading">All posts</h2>
+      <p class="dispatch-archive__count">{{ site.posts | size }} post{% if site.posts.size != 1 %}s{% endif %}</p>
     </div>
 
     {% if site.posts.size > 1 %}
@@ -125,7 +125,7 @@ permalink: /dispatch/
     {% endif %}
 
     {% if site.posts.size == 0 %}
-    <p class="dispatch-archive__empty">The first issue is coming soon.</p>
+    <p class="dispatch-archive__empty">The first post is coming soon.</p>
     {% endif %}
   </div>
 </section>
