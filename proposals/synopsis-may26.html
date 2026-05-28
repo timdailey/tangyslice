@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>90-Day Marketing Jumpstart — Proposal for Synopsis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ── Tangyslice brand tokens ────────────────────────────────────────────── */
+:root {
+  --dark:          #1A0A06;
+  --red:           #BF2A1A;
+  --cream:         #E8E0CC;
+  --gold:          #E8D080;
+  --brown:         #6B4A20;
+  --rule:          #C8B898;
+  --white:         #FFFFFF;
+  --cream-subtle:  #F2EDE3;
+
+  --font-display: 'Teko', sans-serif;
+  --font-body:    'IBM Plex Serif', Georgia, serif;
+  --font-ui:      'Inter', system-ui, sans-serif;
+}
+
+/* ── Reset & base ───────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--dark);
+  line-height: 1.7;
+}
+
+/* ── Document wrapper ───────────────────────────────────────────────────── */
+.proposal {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--white);
+  box-shadow: 0 4px 48px rgba(0,0,0,0.18);
+}
+@media (min-width: 960px) { body { padding: 48px 0; } }
+
+/* ── Cover ──────────────────────────────────────────────────────────────── */
+.cover {
+  background: var(--dark);
+  padding: 72px 64px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  top: -120px; right: -80px;
+  width: 480px; height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(191,42,26,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cover-eyebrow {
+  font-family: var(--font-ui);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--red); margin-bottom: 20px;
+}
+.cover-title {
+  font-family: var(--font-display);
+  font-weight: 700; line-height: 0.92;
+  color: var(--cream); margin-bottom: 24px;
+}
+.cover-title .line-sm { font-size: 52px; display: block; }
+.cover-title .line-lg { font-size: 108px; display: block; }
+.cover-rule { height: 5px; background: var(--red); margin-bottom: 28px; }
+.cover-tagline {
+  font-family: var(--font-body); font-style: italic; font-size: 15px;
+  color: rgba(232,224,204,0.72); line-height: 1.75;
+  max-width: 580px; margin-bottom: 48px;
+}
+.cover-meta {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border: 1px solid rgba(232,224,204,0.15); margin-bottom: 40px;
+}
+.cover-meta-cell {
+  padding: 18px 20px;
+  border-right: 1px solid rgba(232,224,204,0.15);
+  border-bottom: 1px solid rgba(232,224,204,0.15);
+}
+.cover-meta-cell:nth-child(2),
+.cover-meta-cell:nth-child(4) { border-right: none; }
+.cover-meta-cell:nth-child(3),
+.cover-meta-cell:nth-child(4) { border-bottom: none; }
+.cover-meta-label {
+  font-family: var(--font-ui); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 4px;
+}
+.cover-meta-value { font-family: var(--font-body); font-size: 15px; color: var(--cream); }
+.cover-footer { font-family: var(--font-ui); font-size: 12px; color: var(--brown); letter-spacing: 0.04em; }
+
+/* ── Section band ───────────────────────────────────────────────────────── */
+.section-band { background: var(--dark); padding: 36px 64px 32px; }
+.section-band-eyebrow {
+  font-family: var(--font-ui); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 8px;
+}
+.section-band-title {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 52px; line-height: 0.94; color: var(--cream);
+}
+
+/* ── Section content ────────────────────────────────────────────────────── */
+.section-content { padding: 48px 64px; }
+.body-text {
+  font-family: var(--font-body); font-size: 15px;
+  line-height: 1.8; color: var(--dark); margin-bottom: 16px;
+}
+.body-text:last-child { margin-bottom: 0; }
+
+/* ── About stats ────────────────────────────────────────────────────────── */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 32px; }
+.about-stat { border-top: 3px solid var(--red); padding-top: 16px; }
+.about-stat-number {
+  font-family: var(--font-display); font-size: 48px; font-weight: 700;
+  color: var(--dark); line-height: 1; margin-bottom: 4px;
+}
+.about-stat-label {
+  font-family: var(--font-ui); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--brown);
+}
+
+/* ── Challenge rows ─────────────────────────────────────────────────────── */
+.challenges { margin-top: 8px; }
+.challenge-row { display: grid; grid-template-columns: 64px 1fr; border-bottom: 1px solid var(--rule); }
+.challenge-row:first-child { border-top: 1px solid var(--rule); }
+.challenge-row:nth-child(odd)  { background: var(--white); }
+.challenge-row:nth-child(even) { background: var(--cream-subtle); }
+.challenge-num {
+  font-family: var(--font-display); font-size: 38px; font-weight: 700;
+  color: var(--red); padding: 22px 16px 20px 0; line-height: 1;
+}
+.challenge-body { padding: 20px 20px 20px 0; }
+.challenge-title {
+  font-family: var(--font-display); font-size: 22px; font-weight: 700;
+  color: var(--dark); line-height: 1.1; margin-bottom: 6px;
+}
+.challenge-desc { font-family: var(--font-body); font-size: 14px; color: var(--brown); line-height: 1.7; }
+
+/* ── Outcomes grid ──────────────────────────────────────────────────────── */
+.outcomes-grid { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); margin-top: 28px; }
+.outcome-cell {
+  padding: 28px 24px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.outcome-cell:nth-child(2),
+.outcome-cell:nth-child(4) { border-right: none; }
+.outcome-cell:nth-child(3),
+.outcome-cell:nth-child(4) { border-bottom: none; }
+.outcome-cell:nth-child(odd)  { background: var(--white); }
+.outcome-cell:nth-child(even) { background: var(--cream-subtle); }
+.outcome-cell::before { content: ''; display: block; height: 4px; background: var(--red); margin-bottom: 18px; }
+.outcome-title {
+  font-family: var(--font-display); font-size: 22px; font-weight: 700;
+  color: var(--dark); line-height: 1.1; margin-bottom: 10px;
+}
+.outcome-desc { font-family: var(--font-body); font-size: 14px; color: var(--brown); line-height: 1.75; }
+
+/* ── Team ───────────────────────────────────────────────────────────────── */
+.team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 28px; }
+.team-rule { height: 5px; background: var(--red); margin-bottom: 20px; }
+.team-name {
+  font-family: var(--font-display); font-size: 34px; font-weight: 700;
+  color: var(--dark); line-height: 1; margin-bottom: 6px;
+}
+.team-role {
+  font-family: var(--font-ui); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--red); margin-bottom: 16px;
+}
+.team-bio { font-family: var(--font-body); font-size: 14px; color: var(--brown); line-height: 1.75; }
+.team-bio p { margin-bottom: 12px; }
+.team-bio p:last-child { margin-bottom: 0; }
+
+/* ── Activity groups ────────────────────────────────────────────────────── */
+.activity-groups { background: var(--dark); }
+.activity-group-header {
+  padding: 18px 32px 14px;
+  border-bottom: 1px solid rgba(232,224,204,0.08);
+}
+.activity-group-header:not(:first-child) { border-top: 1px solid rgba(232,224,204,0.12); }
+.activity-group-label {
+  font-family: var(--font-ui); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold);
+}
+.activity-group-label .phase-days {
+  color: rgba(232,208,128,0.45); font-weight: 400; margin-left: 4px;
+}
+.activity-group-label .phase-sub {
+  color: rgba(232,208,128,0.5); font-weight: 400;
+}
+.activity-group-items { padding: 6px 32px 24px 32px; background: rgba(0,0,0,0.25); }
+.activity-item {
+  display: grid; grid-template-columns: 16px 1fr; gap: 10px;
+  padding: 7px 0; border-bottom: 1px solid rgba(232,224,204,0.05);
+  align-items: baseline;
+}
+.activity-item:last-child { border-bottom: none; }
+.activity-dash { font-family: var(--font-ui); font-size: 13px; color: var(--red); line-height: 1.7; }
+.activity-text { font-family: var(--font-body); font-size: 14px; color: rgba(232,224,204,0.75); line-height: 1.7; }
+.activity-text strong { color: var(--cream); font-weight: 600; }
+
+/* ── GEO callout ────────────────────────────────────────────────────────── */
+.geo-callout { margin-top: 24px; border: 2px solid var(--red); background: #FBF0EE; padding: 24px 28px; }
+.geo-callout-label {
+  font-family: var(--font-ui); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--red); margin-bottom: 10px;
+}
+.geo-callout-text { font-family: var(--font-body); font-size: 14px; color: var(--dark); line-height: 1.75; }
+
+/* ── Scope boundaries ───────────────────────────────────────────────────── */
+.scope-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin-top: 8px; border: 1px solid var(--rule); }
+.scope-cell {
+  padding: 20px 22px;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.scope-cell:nth-child(odd) { background: var(--white); }
+.scope-cell:nth-child(even) { background: var(--cream-subtle); border-right: none; }
+.scope-cell:nth-last-child(-n+2) { border-bottom: none; }
+.scope-in-label {
+  font-family: var(--font-ui); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--brown); margin-bottom: 8px;
+}
+.scope-in-label.out { color: var(--red); }
+.scope-title {
+  font-family: var(--font-display); font-size: 20px; font-weight: 700;
+  color: var(--dark); line-height: 1.1; margin-bottom: 5px;
+}
+.scope-desc { font-family: var(--font-body); font-size: 13px; color: var(--brown); line-height: 1.65; }
+
+/* ── Numbered rows (partnership, steps) ─────────────────────────────────── */
+.numbered-rows { margin-top: 24px; }
+.numbered-row {
+  display: grid; grid-template-columns: 64px 1fr;
+  border-bottom: 1px solid var(--rule);
+}
+.numbered-row:first-child { border-top: 1px solid var(--rule); }
+.numbered-row:nth-child(odd)  { background: var(--white); }
+.numbered-row:nth-child(even) { background: var(--cream-subtle); }
+.numbered-row-num {
+  font-family: var(--font-display); font-size: 34px; font-weight: 700;
+  color: var(--red); padding: 22px 16px 20px 0; line-height: 1;
+}
+.numbered-row-body { padding: 20px 20px 20px 0; }
+.numbered-row-title {
+  font-family: var(--font-display); font-size: 20px; font-weight: 700;
+  color: var(--dark); line-height: 1.1; margin-bottom: 5px;
+}
+.numbered-row-desc { font-family: var(--font-body); font-size: 14px; color: var(--brown); line-height: 1.7; }
+
+/* ── Investment ─────────────────────────────────────────────────────────── */
+.price-header {
+  display: grid; grid-template-columns: 1fr auto;
+  background: var(--dark); align-items: stretch;
+}
+.price-header-left { padding: 28px 28px 24px; }
+.price-header-program {
+  font-family: var(--font-display); font-size: 30px; font-weight: 700;
+  color: var(--cream); line-height: 1; margin-bottom: 8px;
+}
+.price-header-meta { font-family: var(--font-ui); font-size: 12px; color: var(--gold); letter-spacing: 0.04em; }
+.price-header-right {
+  background: var(--red); padding: 28px 36px;
+  display: flex; flex-direction: column; align-items: flex-end; justify-content: center; min-width: 200px;
+}
+.price-amount { font-family: var(--font-display); font-size: 56px; font-weight: 700; color: var(--white); line-height: 1; }
+.price-term { font-family: var(--font-ui); font-size: 12px; color: rgba(255,255,255,0.8); text-align: right; margin-top: 2px; }
+
+.deliverables-table {
+  width: 100%; border-collapse: collapse; border: 1px solid var(--rule); border-top: none;
+}
+.deliverables-table tr:nth-child(odd)  td { background: var(--white); }
+.deliverables-table tr:nth-child(even) td { background: var(--cream-subtle); }
+.deliverables-table td {
+  font-family: var(--font-body); font-size: 14px; color: var(--dark);
+  padding: 10px 16px; border-bottom: 1px solid var(--rule);
+}
+.deliverables-table td:last-child {
+  font-family: var(--font-ui); font-size: 12px; font-weight: 700; color: var(--red);
+  text-align: center; white-space: nowrap; width: 100px; border-left: 1px solid var(--rule);
+}
+.deliverables-table tr.out-of-scope td { background: var(--cream); }
+.deliverables-table tr.out-of-scope td:last-child { color: var(--dark); }
+
+/* Hours table */
+.hours-label {
+  font-family: var(--font-ui); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--brown); margin: 32px 0 12px;
+}
+.hours-note { font-family: var(--font-body); font-style: italic; font-size: 13px; color: var(--brown); line-height: 1.6; margin-bottom: 16px; }
+.hours-table {
+  width: 100%; border-collapse: collapse; border: 1px solid var(--rule);
+}
+.hours-table th {
+  font-family: var(--font-ui); font-size: 11px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--dark); color: var(--gold);
+  padding: 10px 14px; text-align: left; border-right: 1px solid rgba(232,224,204,0.15);
+}
+.hours-table th:last-child { border-right: none; }
+.hours-table td {
+  font-family: var(--font-body); font-size: 13px; color: var(--dark);
+  padding: 9px 14px; border-bottom: 1px solid var(--rule); border-right: 1px solid var(--rule);
+}
+.hours-table td:last-child { border-right: none; }
+.hours-table tr:nth-child(odd)  td { background: var(--white); }
+.hours-table tr:nth-child(even) td { background: var(--cream-subtle); }
+.hours-table tr.hours-total td {
+  background: var(--cream); font-weight: 600;
+  font-family: var(--font-ui); font-size: 12px;
+}
+.hours-table td.phase-tag {
+  font-family: var(--font-ui); font-size: 11px; color: var(--brown);
+}
+.hours-table td.num { text-align: right; font-family: var(--font-ui); font-size: 13px; }
+
+/* ── Terms ──────────────────────────────────────────────────────────────── */
+.terms-section { padding: 40px 64px; border-top: 1px solid var(--rule); }
+.terms-label {
+  font-family: var(--font-ui); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--brown); margin-bottom: 16px;
+}
+.terms-list { list-style: none; padding: 0; }
+.terms-list li {
+  font-family: var(--font-body); font-size: 13px; color: var(--brown); line-height: 1.7;
+  padding: 5px 0 5px 20px; position: relative;
+  border-bottom: 1px solid rgba(200,184,152,0.3);
+}
+.terms-list li:last-child { border-bottom: none; }
+.terms-list li::before { content: '—'; position: absolute; left: 0; color: var(--rule); }
+
+/* ── Signature ──────────────────────────────────────────────────────────── */
+.signature-section { padding: 40px 64px 56px; }
+.sig-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.sig-party-label {
+  font-family: var(--font-ui); font-size: 10px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--brown);
+  padding-top: 10px; border-top: 1px solid var(--rule); margin-bottom: 32px;
+}
+.sig-field { margin-bottom: 20px; }
+.sig-field-label {
+  font-family: var(--font-body); font-style: italic; font-size: 13px;
+  color: var(--rule); border-bottom: 1px solid var(--rule); padding-bottom: 28px; display: block;
+}
+
+/* ── Footer ─────────────────────────────────────────────────────────────── */
+.proposal-footer {
+  background: var(--dark); padding: 18px 64px;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.proposal-footer-left { font-family: var(--font-ui); font-size: 11px; color: var(--brown); letter-spacing: 0.04em; }
+.proposal-footer-right { font-family: var(--font-ui); font-size: 11px; color: var(--red); }
+
+/* ── Print ──────────────────────────────────────────────────────────────── */
+@media print {
+  body { background: white; padding: 0; }
+  .proposal { box-shadow: none; max-width: 100%; }
+  .section-band, .activity-groups, .cover, .price-header,
+  .hours-table th, .proposal-footer { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .outcomes-grid, .challenges, .team-grid, .hours-table { page-break-inside: avoid; }
+}
+</style>
+</head>
+
+<body>
+<div class="proposal">
+
+  <!-- ── Cover ────────────────────────────────────────────────────────────── -->
+  <div class="cover">
+    <p class="cover-eyebrow">90-Day Marketing Jumpstart</p>
+    <h1 class="cover-title">
+      <span class="line-sm">Proposal for</span>
+      <span class="line-lg">Synopsis</span>
+    </h1>
+    <div class="cover-rule"></div>
+    <p class="cover-tagline">A focused three-month engagement to build the positioning, content, pipeline, and outbound motion that turns a compelling AI data platform into a credible, findable, and buyable one.</p>
+    <div class="cover-meta">
+      <div class="cover-meta-cell">
+        <div class="cover-meta-label">Prepared for</div>
+        <div class="cover-meta-value">Synopsis</div>
+      </div>
+      <div class="cover-meta-cell">
+        <div class="cover-meta-label">Date</div>
+        <div class="cover-meta-value">May 2026</div>
+      </div>
+      <div class="cover-meta-cell">
+        <div class="cover-meta-label">Contact</div>
+        <div class="cover-meta-value">TBD</div>
+      </div>
+      <div class="cover-meta-cell">
+        <div class="cover-meta-label">Valid for</div>
+        <div class="cover-meta-value">30 days</div>
+      </div>
+    </div>
+    <img src="https://tangyslice.com/assets/img/tangyslice-logo-dark.webp" alt="Tangyslice Collective" style="height:32px; opacity:0.7; margin-bottom:20px; display:block;">
+    <p class="cover-footer">Tangyslice Collective LLC · Confidential · tangyslice.com</p>
+  </div>
+
+  <!-- ── About Synopsis ───────────────────────────────────────────────────── -->
+  <div class="section-band">
+    <p class="section-band-eyebrow">About Synopsis</p>
+    <h2 class="section-band-title">The foundation for<br>AI-powered business.</h2>
+  </div>
+  <div class="section-content">
+    <p class="body-text">Synopsis is an AI data infrastructure platform built for executives who know they need to leverage AI — but don't know where to start. It connects every system, cleans and unifies data automatically, resolves duplicate records, and delivers insights through natural language queries.</p>
+    <p class="body-text">The platform compresses what traditionally takes months of data engineering work into days — no data team required. Self-service analytics, live dashboards, and AI-generated insights are alive and generating actionable answers within a week of setup.</p>
+    <p class="body-text">Key capabilities include pre-built connectors for 200+ applications, automatic data modeling, entity resolution, natural language querying, and live dashboards that update automatically.</p>
+    <div class="about-grid">
+      <div class="about-stat">
+        <div class="about-stat-number">200+</div>
+        <div class="about-stat-label">Pre-built connectors</div>
+      </div>
+      <div class="about-stat">
+        <div class="about-stat-number">Days</div>
+        <div class="about-stat-label">Not months, to first insight</div>
+      </div>
+      <div class="about-stat">
+        <div class="about-stat-number">0</div>
+        <div class="about-stat-label">Data team required</div>
+      </div>
+      <div class="about-stat">
+        <div class="about-stat-number">95%</div>
+        <div class="about-stat-label">Faster insights vs. manual</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── The Opportunity ──────────────────────────────────────────────────── -->
+  <div class="section-band">
+    <p class="section-band-eyebrow">The Opportunity</p>
+    <h2 class="section-band-title">Strong product.<br>Market infrastructure to build.</h2>
+  </div>
+  <div class="section-content">
+    <p class="body-text">Synopsis has a compelling product story and strong early traction. The opportunity ahead is to build the systems that take it beyond direct outreach — the positioning, content, pipeline, and outbound motion that the product has outrun.</p>
+    <div class="challenges">
+      <div class="challenge-row">
+        <div class="challenge-num">01</div>
+        <div class="challenge-body">
+          <div class="challenge-title">Thin top-of-funnel</div>
+          <div class="challenge-desc">Minimal content marketing, SEO/GEO, or thought leadership to generate inbound demand beyond direct sales outreach. The site can only rank for branded terms and a handful of head terms. Buyers doing independent research find nothing.</div>
+        </div>
+      </div>
+      <div class="challenge-row">
+        <div class="challenge-num">02</div>
+        <div class="challenge-body">
+          <div class="challenge-title">Underleveraged differentiation</div>
+          <div class="challenge-desc">The "no data team required, days not months" story is the most compelling thing Synopsis can say. It is not yet translated into the language buyers use, in the places they look, with the proof points that make it credible at scale.</div>
+        </div>
+      </div>
+      <div class="challenge-row">
+        <div class="challenge-num">03</div>
+        <div class="challenge-body">
+          <div class="challenge-title">No demand generation motion</div>
+          <div class="challenge-desc">No content flywheel, no nurture infrastructure, and no pipeline model. Every new conversation starts from zero. The mid-market buyer doing independent research encounters nothing.</div>
+        </div>
+      </div>
+      <div class="challenge-row">
+        <div class="challenge-num">04</div>
+        <div class="challenge-body">
+          <div class="challenge-title">Low brand awareness beyond direct network</div>
+          <div class="challenge-desc">Limited social presence and no content marketing signals that Synopsis hasn't scaled beyond its immediate network. The product is ahead of the market infrastructure that makes it discoverable and credible to new buyers.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── What Success Looks Like ──────────────────────────────────────────── -->
+  <div class="section-band">
+    <p class="section-band-eyebrow">What Success Looks Like</p>
+    <h2 class="section-band-title">Four outcomes.<br>Ninety days of foundation.</h2>
+  </div>
+  <div class="section-content">
+    <p class="body-text">This engagement is the foundation of a longer trajectory. The three months we work together are designed to generate returns that extend well beyond the contract period.</p>
+    <div class="outcomes-grid">
+      <div class="outcome-cell">
+        <div class="outcome-title">Consistent messaging and a complete sales kit</div>
+        <div class="outcome-desc">A single, aligned positioning statement and ICP that the entire team — sales, product, founders — is working from. A refreshed deck and enablement resources that reduce friction in every deal conversation. No more translating the product in the room.</div>
+      </div>
+      <div class="outcome-cell">
+        <div class="outcome-title">A sharper, conversion-focused website</div>
+        <div class="outcome-desc">Updated copy and CTAs that speak to buyer problems, not technology features. Specifically tuned to Synopsis's "no data team required" narrative. The website earns the demo request rather than asking for it.</div>
+      </div>
+      <div class="outcome-cell">
+        <div class="outcome-title">Meaningful educational content placements</div>
+        <div class="outcome-desc">8+ published pieces, glossary pages, and a GEO-optimized FAQ — entity structure in place and the flywheel turning. Synopsis becomes findable before buyers enter a sales conversation, in search and in AI-generated results.</div>
+      </div>
+      <div class="outcome-cell">
+        <div class="outcome-title">A working GTM motion with early pipeline signals</div>
+        <div class="outcome-desc">Defined segment, prioritized channels, documented playbook, and 3–8 marketing-sourced conversations from outbound and content. Expect leading indicators, not a pipeline number. An increase in web traffic and keyword rankings is the measurable floor.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Who's Doing the Work ──────────────────────────────────────────────── -->
+  <div class="section-band">
+    <p class="section-band-eyebrow">Who's Doing the Work</p>
+    <h2 class="section-band-title">Two co-founders.<br>Hands-on, every month.</h2>
+  </div>
+  <div class="section-content">
+    <p class="body-text">This engagement is led directly by the two co-founders of Tangyslice Collective LLC — no account managers, no junior handoffs.</p>
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="team-rule"></div>
+        <div class="team-name">Frank Days</div>
+        <div class="team-role">Co-Founder</div>
+        <div class="team-bio">
+          <p>Frank has spent more than 20 years helping fast-growing technology companies build marketing into a growth engine. As CMO at Aerospike, he drove 50% new customer acquisition growth and led a full brand transformation. As SVP of Marketing at EDB, he scaled the company from $25M to $100M in ARR, culminating in a Bain Capital exit.</p>
+          <p>Earlier roles at Tesora and TwinStrata — both successfully acquired — sharpened his instinct for repositioning and narrative. He holds an MBA from MIT Sloan and writes @vibecodingcmo on Substack. At Tangyslice Collective, he leads strategy, positioning, GTM planning, outbound communications, and client alignment.</p>
+        </div>
+      </div>
+      <div class="team-member">
+        <div class="team-rule"></div>
+        <div class="team-name">Tim Dailey</div>
+        <div class="team-role">Co-Founder</div>
+        <div class="team-bio">
+          <p>Tim has spent more than 20 years at the intersection of digital marketing, web strategy, and search. He has led digital marketing at B2B tech companies including Aerospike and EDB, held a VP Web Strategy role at Citizens Bank, and spent 12+ years at ForHealth Consulting building credibility-first content programs for highly regulated industries.</p>
+          <p>His recent focus is Generative Engine Optimization — understanding why some brands get cited by AI models and others don't. His CRO and UX background means the work connects visibility all the way through to conversion. At Tangyslice Collective, he leads content production, SEO/GEO execution, and digital channel work.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── How We Get There ──────────────────────────────────────────────────── -->
+  <div class="section-band">
+    <p class="section-band-eyebrow">How We Get There</p>
+    <h2 class="section-band-title">Structured work.<br>Three phases.</h2>
+  </div>
+  <div class="section-content">
+    <p class="body-text">Work moves in three sequential phases. Each builds directly on the one before it — we do not activate anything until the strategy and assets are solid. A sprint-based project management cadence with bi-weekly planning runs throughout all three phases.</p>
+
+    <div class="activity-groups">
+
+      <div class="activity-group-header">
+        <div class="activity-group-label">Phase 1 — Foundation
+          <span class="phase-days">· Days 1–30</span>
+          <span class="phase-sub"> · Strategy, positioning, and research</span>
+        </div>
+      </div>
+      <div class="activity-group-items">
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>Foundational strategy &amp; positioning</strong> — market positioning statement and messaging hierarchy, specifically addressing the "no data team required, days not months" differentiation</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>ICP and persona development</strong> — ideal customer profile with personas mapped to Synopsis's "executives who know they need AI but don't know where to start" buyer</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>Competitive landscape</strong> — differentiation framework mapping Synopsis against data engineering consultancies, BI platforms, and emerging AI data tools</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>Brand identity alignment</strong> — voice guidelines and brand identity alignment to support consistent execution across all channels</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>Audit of programs, tech stack, and website</strong> — full review of CRM, martech stack, existing analytics, website content, and automation workflows</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>Gap analysis</strong> — structured output to guide plan-building across phases 2 and 3</span></div>
+      </div>
+
+      <div class="activity-group-header">
+        <div class="activity-group-label">Phase 2 — Build
+          <span class="phase-days">· Days 31–60</span>
+          <span class="phase-sub"> · Content, enablement, and SEO/GEO</span>
+        </div>
+      </div>
+      <div class="activity-group-items">
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>Refreshed sales deck and core enablement resources</strong> — reoriented around buyer problems, not platform features</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>Website copy and CTA recommendations</strong> — spec all improvements for Synopsis's team to implement; copy that earns the demo request</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>Case study development</strong> — interview-based proof asset, anonymized where necessary</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>Content strategy mapped to customer journey</strong> — editorial approach tied to buyer stages and keyword targets</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>SEO/GEO strategy and entity building</strong> — keyword and content gap analysis, targeting the AI-search layer where Synopsis's buyers increasingly discover solutions</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>GTM plan, funnel model, and lead scoring</strong> — go-to-market plan with prioritized segment sequencing, nurture sequence build (1–2 sequences), and lead scoring model</span></div>
+      </div>
+
+      <div class="activity-group-header">
+        <div class="activity-group-label">Phase 3 — Activate
+          <span class="phase-days">· Days 61–90</span>
+          <span class="phase-sub"> · Outbound, distribution, and launch</span>
+        </div>
+      </div>
+      <div class="activity-group-items">
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>8 SEO/GEO blog posts</strong> — researched, written, and LinkedIn-adapted; targeting high-intent data infrastructure queries with entity structure built in</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>Glossary pages</strong> — AI-drafted, edited, and schema-formatted; targeting definitional queries in data infrastructure and AI readiness where Synopsis can own the cited answer</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>GEO-optimized FAQ pages</strong> — structured Q&amp;A content with FAQPage schema, directly targeted at AI engine citation</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>Social media strategy and 4-week content calendar template</strong> — repeatable framework for Synopsis's team to continue executing</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>Founder-led LinkedIn ghostwriting</strong> — 4 posts, AI-assisted thought leadership in the founder's voice and ready to publish</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>PR/AR outreach</strong> — 5–8 targeted pitches to tech and data infrastructure media</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>Events strategy framework</strong> — event selection criteria and participation model for conferences and webinars</span></div>
+        <div class="activity-item"><span class="activity-dash">—</span><span class="activity-text"><strong>Metrics framework, reporting dashboards, and H2 marketing plan</strong> — fully documented plan with sprint cadence ready to execute or hand off at day 90</span></div>
+      </div>
+
+    </div>
+
+    <div class="geo-callout">
+      <div class="geo-callout-label">Entity &amp; GEO Optimization — woven throughout all three phases</div>
+      <p class="geo-callout-text">AI engines must clearly understand who Synopsis is before any content strategy compounds. We audit and align Synopsis's entity signals across LinkedIn, Crunchbase, directory listings, schema markup, and founder bio pages — ensuring every surface tells a consistent, citable story. This work runs in parallel from day one, not as a Phase 3 afterthought.</p>
+    </div>
+  </div>
+
+  <!-- ── Scope Boundaries ──────────────────────────────────────────────────── -->
+  <div class="section-band">
+    <p class="section-band-eyebrow">Scope</p>
+    <h2 class="section-band-title">What's in.<br>What's out.</h2>
+  </div>
+  <div class="section-content">
+    <p class="body-text">To keep the engagement focused and executable at 20 hours per week, the following are explicitly out of scope. Each is a deliberate choice, not a gap.</p>
+    <div class="scope-grid">
+      <div class="scope-cell">
+        <div class="scope-in-label out">Out of scope</div>
+        <div class="scope-title">Paid advertising</div>
+        <div class="scope-desc">Requires dedicated budget, creative, and ongoing management that the current hour model doesn't support well. Recommended for H2 once positioning is proven and channels have signal.</div>
+      </div>
+      <div class="scope-cell">
+        <div class="scope-in-label">In scope instead</div>
+        <div class="scope-title">Organic and earned channels</div>
+        <div class="scope-desc">SEO/GEO content, PR/AR outreach, social strategy, and founder LinkedIn — all channels that compound over time and don't require ongoing ad spend to maintain.</div>
+      </div>
+      <div class="scope-cell">
+        <div class="scope-in-label out">Out of scope</div>
+        <div class="scope-title">Website development or redesign</div>
+        <div class="scope-desc">Copy and CTA recommendations are in scope; implementation is a client-side or separate engagement. Tangyslice specs and writes; Synopsis's team ships.</div>
+      </div>
+      <div class="scope-cell">
+        <div class="scope-in-label">In scope instead</div>
+        <div class="scope-title">Website copy and CTA spec</div>
+        <div class="scope-desc">Every page that needs new copy gets a full written spec with CTA recommendations — ready to implement without additional briefing.</div>
+      </div>
+      <div class="scope-cell">
+        <div class="scope-in-label out">Out of scope</div>
+        <div class="scope-title">Full events program production</div>
+        <div class="scope-desc">Event planning and logistics are out of scope. Strategy framework and event selection criteria are in — enough to act on without committing to production overhead.</div>
+      </div>
+      <div class="scope-cell">
+        <div class="scope-in-label">In scope instead</div>
+        <div class="scope-title">Events strategy framework</div>
+        <div class="scope-desc">A prioritized list of target events, participation criteria, and a repeatable format for how Synopsis should show up — conference, webinar, or panel.</div>
+      </div>
+      <div class="scope-cell">
+        <div class="scope-in-label out">Out of scope</div>
+        <div class="scope-title">Ongoing social media management</div>
+        <div class="scope-desc">Day-to-day posting and community management are not included. The engagement produces the strategy and calendar template; execution stays with Synopsis's team.</div>
+      </div>
+      <div class="scope-cell">
+        <div class="scope-in-label">In scope instead</div>
+        <div class="scope-title">Social strategy and calendar template</div>
+        <div class="scope-desc">A documented social media strategy and 4-week content calendar template Synopsis's team can execute and repeat without additional briefing.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Partnership ───────────────────────────────────────────────────────── -->
+  <div class="section-band">
+    <p class="section-band-eyebrow">Partnership</p>
+    <h2 class="section-band-title">What we need<br>from Synopsis.</h2>
+  </div>
+  <div class="section-content">
+    <p class="body-text">This engagement is a two-way partnership. To deliver on time and at quality, we need the following from the Synopsis team:</p>
+    <div class="numbered-rows">
+      <div class="numbered-row">
+        <div class="numbered-row-num">01</div>
+        <div class="numbered-row-body">
+          <div class="numbered-row-title">A primary point of contact</div>
+          <div class="numbered-row-desc">Someone with authority to review and approve content and strategic recommendations, assumed from the Synopsis leadership team.</div>
+        </div>
+      </div>
+      <div class="numbered-row">
+        <div class="numbered-row-num">02</div>
+        <div class="numbered-row-body">
+          <div class="numbered-row-title">Access to the marketing stack</div>
+          <div class="numbered-row-desc">CRM, email platform, and any existing analytics or attribution tooling — within the first two weeks of kickoff.</div>
+        </div>
+      </div>
+      <div class="numbered-row">
+        <div class="numbered-row-num">03</div>
+        <div class="numbered-row-body">
+          <div class="numbered-row-title">Timely feedback on deliverables</div>
+          <div class="numbered-row-desc">We ask for a 3-business-day turnaround on review cycles to keep the timeline on track. Delays in approval directly push back publication and launch dates.</div>
+        </div>
+      </div>
+      <div class="numbered-row">
+        <div class="numbered-row-num">04</div>
+        <div class="numbered-row-body">
+          <div class="numbered-row-title">Implementation ownership</div>
+          <div class="numbered-row-desc">Tangyslice specs and writes all recommendations. Synopsis's team implements approved changes to the website and email platform.</div>
+        </div>
+      </div>
+      <div class="numbered-row">
+        <div class="numbered-row-num">05</div>
+        <div class="numbered-row-body">
+          <div class="numbered-row-title">Monthly strategy sessions</div>
+          <div class="numbered-row-desc">One 60-minute strategy session per month and availability for a brief case study interview in the final month.</div>
+        </div>
+      </div>
+      <div class="numbered-row">
+        <div class="numbered-row-num">06</div>
+        <div class="numbered-row-body">
+          <div class="numbered-row-title">SME review of glossary pages</div>
+          <div class="numbered-row-desc">Glossary pages are AI-drafted and edited by Tangyslice, but require a single SME review pass before publication. Delivered in batches — estimated 1–2 hours of Synopsis review time per batch.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Investment ────────────────────────────────────────────────────────── -->
+  <div class="section-band">
+    <p class="section-band-eyebrow">Investment</p>
+    <h2 class="section-band-title">Simple,<br>transparent pricing.</h2>
+  </div>
+  <div class="section-content">
+    <p class="body-text">One monthly retainer. No hidden fees. Out-of-scope work agreed in advance.</p>
+    <div class="price-header">
+      <div class="price-header-left">
+        <div class="price-header-program">3-Month Jumpstart Program</div>
+        <div class="price-header-meta">~20 hrs/wk · Frank Days &amp; Tim Dailey · $180/hr blended rate · ~260 hours total</div>
+      </div>
+      <div class="price-header-right">
+        <div class="price-amount">$12,000</div>
+        <div class="price-term">/ month · 3-month term</div>
+      </div>
+    </div>
+    <table class="deliverables-table">
+      <tr><td>Market positioning statement, messaging hierarchy, and brand identity alignment</td><td>Included</td></tr>
+      <tr><td>ICP with personas, competitive landscape, and differentiation framework</td><td>Included</td></tr>
+      <tr><td>Full audit of programs, tech stack, and website with gap analysis</td><td>Included</td></tr>
+      <tr><td>Refreshed sales deck and core enablement resources</td><td>Included</td></tr>
+      <tr><td>Website copy and CTA recommendations</td><td>Included</td></tr>
+      <tr><td>Case study development (anonymized where necessary)</td><td>Included</td></tr>
+      <tr><td>Content strategy mapped to customer journey stages</td><td>Included</td></tr>
+      <tr><td>SEO/GEO strategy and entity building plan</td><td>Included</td></tr>
+      <tr><td>8 researched, written, and LinkedIn-adapted blog posts</td><td>Included</td></tr>
+      <tr><td>Glossary pages — AI-drafted, edited, schema-formatted</td><td>Included</td></tr>
+      <tr><td>GEO-optimized FAQ pages with FAQPage schema</td><td>Included</td></tr>
+      <tr><td>GTM plan with segment sequencing, nurture sequence (1–2), lead scoring, and funnel model</td><td>Included</td></tr>
+      <tr><td>Social media strategy and 4-week content calendar template</td><td>Included</td></tr>
+      <tr><td>Founder-led LinkedIn ghostwriting — 4 posts</td><td>Included</td></tr>
+      <tr><td>PR/AR outreach — 5–8 targeted pitches</td><td>Included</td></tr>
+      <tr><td>Events strategy framework</td><td>Included</td></tr>
+      <tr><td>Metrics framework, reporting dashboards, and H2 marketing plan</td><td>Included</td></tr>
+      <tr><td>Sprint-based project management with bi-weekly planning throughout</td><td>Included</td></tr>
+      <tr class="out-of-scope"><td>Out-of-scope work</td><td>$1,400/day</td></tr>
+    </table>
+
+    <div class="hours-label">Hour allocation by workstream</div>
+    <p class="hours-note">Estimated hours reflect AI-assisted execution — first drafts, research synthesis, content production, and structured outputs are AI-generated; Frank and Tim direct, brief, edit, and refine. Allocated hours represent the planned budget per workstream. The sprint model allows rebalancing weekly based on actual progress.</p>
+    <table class="hours-table">
+      <thead>
+        <tr>
+          <th>Workstream</th>
+          <th>Phase</th>
+          <th style="text-align:right">AI-assisted est.</th>
+          <th style="text-align:right">Allocated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Strategy and positioning</td><td class="phase-tag">Phase 1</td><td class="num">20 hrs</td><td class="num">28 hrs</td></tr>
+        <tr><td>Audit and gap analysis</td><td class="phase-tag">Phase 1</td><td class="num">14 hrs</td><td class="num">22 hrs</td></tr>
+        <tr><td>Sales enablement and content</td><td class="phase-tag">Phase 2</td><td class="num">22 hrs</td><td class="num">28 hrs</td></tr>
+        <tr><td>SEO / GEO strategy</td><td class="phase-tag">Phase 2</td><td class="num">12 hrs</td><td class="num">16 hrs</td></tr>
+        <tr><td>SEO / GEO execution — 8 posts</td><td class="phase-tag">Phase 2–3</td><td class="num">20 hrs</td><td class="num">26 hrs</td></tr>
+        <tr><td>Pipeline planning</td><td class="phase-tag">Phase 2</td><td class="num">12 hrs</td><td class="num">20 hrs</td></tr>
+        <tr><td>Demand activation</td><td class="phase-tag">Phase 3</td><td class="num">14 hrs</td><td class="num">18 hrs</td></tr>
+        <tr><td>Outbound and communications</td><td class="phase-tag">Phase 3</td><td class="num">18 hrs</td><td class="num">18 hrs</td></tr>
+        <tr><td>Measurement and sprints</td><td class="phase-tag">Ongoing</td><td class="num">12 hrs</td><td class="num">16 hrs</td></tr>
+        <tr class="hours-total">
+          <td>Total</td><td></td><td class="num">~148 hrs</td><td class="num">~192 hrs</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── Next Steps ────────────────────────────────────────────────────────── -->
+  <div class="section-band">
+    <p class="section-band-eyebrow">Next Steps</p>
+    <h2 class="section-band-title">How we<br>get started.</h2>
+  </div>
+  <div class="section-content">
+    <div class="numbered-rows">
+      <div class="numbered-row">
+        <div class="numbered-row-num">01</div>
+        <div class="numbered-row-body">
+          <div class="numbered-row-title">Review and approve this proposal</div>
+          <div class="numbered-row-desc">Use the signature block below or reply to your proposal email with written confirmation to proceed. Questions or adjustments before signing? We're happy to walk through the scope, timeline, or hour assumptions in a short call.</div>
+        </div>
+      </div>
+      <div class="numbered-row">
+        <div class="numbered-row-num">02</div>
+        <div class="numbered-row-body">
+          <div class="numbered-row-title">Confirm engagement start date and kickoff scheduling</div>
+          <div class="numbered-row-desc">We'll align on the Phase 1 start date and schedule the kickoff call — 60 minutes to review the current state of Synopsis's marketing stack, confirm content priorities, and walk through what to expect in the first 30 days.</div>
+        </div>
+      </div>
+      <div class="numbered-row">
+        <div class="numbered-row-num">03</div>
+        <div class="numbered-row-body">
+          <div class="numbered-row-title">Complete the onboarding questionnaire</div>
+          <div class="numbered-row-desc">A brief document covering existing assets, current positioning assumptions, and target accounts — fills in the gaps before Phase 1 begins so we hit the ground running.</div>
+        </div>
+      </div>
+      <div class="numbered-row">
+        <div class="numbered-row-num">04</div>
+        <div class="numbered-row-body">
+          <div class="numbered-row-title">Phase 1 kickoff — strategy and positioning workshop</div>
+          <div class="numbered-row-desc">Within the first week: a working session to align on positioning direction, confirm the ICP, and kick off the competitive and audit workstreams. Concrete deliverables follow within two weeks.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Terms ─────────────────────────────────────────────────────────────── -->
+  <div class="terms-section">
+    <div class="terms-label">Terms</div>
+    <ul class="terms-list">
+      <li>This proposal is valid for 30 days from the date on the cover page.</li>
+      <li>Contract term is 3 months, billed monthly at $12,000 per month.</li>
+      <li>Payment is due within 15 days of invoice. First month billed upon contract signing.</li>
+      <li>Either party may terminate with 30 days written notice after the initial 60 days.</li>
+      <li>All strategy documents, content, and deliverables produced are owned by Synopsis upon receipt.</li>
+      <li>Tangyslice Collective LLC reserves the right to reference Synopsis as a client for case study purposes unless otherwise requested in writing.</li>
+    </ul>
+  </div>
+
+  <!-- ── Signature ─────────────────────────────────────────────────────────── -->
+  <div class="signature-section">
+    <div class="sig-grid">
+      <div>
+        <div class="sig-party-label">Authorized Signature · Synopsis</div>
+        <div class="sig-field"><span class="sig-field-label">Signature</span></div>
+        <div class="sig-field"><span class="sig-field-label">Date</span></div>
+        <div class="sig-field"><span class="sig-field-label">Printed name &amp; title</span></div>
+      </div>
+      <div>
+        <div class="sig-party-label">Authorized Signature · Tangyslice Collective LLC</div>
+        <div class="sig-field"><span class="sig-field-label">Signature</span></div>
+        <div class="sig-field"><span class="sig-field-label">Date</span></div>
+        <div class="sig-field"><span class="sig-field-label">Printed name &amp; title</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Footer ────────────────────────────────────────────────────────────── -->
+  <div class="proposal-footer">
+    <span class="proposal-footer-left">Tangyslice Collective LLC · Confidential · Prepared for Synopsis · May 2026</span>
+    <span class="proposal-footer-right">tangyslice.com</span>
+  </div>
+
+</div>
+</body>
+</html>
