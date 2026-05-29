@@ -12,7 +12,8 @@
   {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
 
   <!-- Primary meta -->
-  <title>{% if page.title %}{{ page.title }} — {% endif %}Tangyslice Collective</title>
+  <!-- meta_title overrides the <title> tag (search/GEO); falls back to page.title + brand -->
+  <title>{% if page.meta_title %}{{ page.meta_title }}{% elsif page.title %}{{ page.title }} — Tangyslice Collective{% else %}Tangyslice Collective{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
   <meta name="robots" content="index, follow" />
 
@@ -20,17 +21,18 @@
   <link rel="canonical" href="{{ page.url | absolute_url }}" />
 
   <!-- Open Graph -->
+  <!-- og_title / og_description override OG tags (social sharing); fall back to page.title / description -->
   <meta property="og:type"        content="{% if page.layout == 'blog-post' %}article{% else %}website{% endif %}" />
-  <meta property="og:title"       content="{% if page.title %}{{ page.title }} — {% endif %}Tangyslice Collective" />
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:title"       content="{% if page.og_title %}{{ page.og_title }}{% elsif page.title %}{{ page.title }} — Tangyslice Collective{% else %}Tangyslice Collective{% endif %}" />
+  <meta property="og:description" content="{% if page.og_description %}{{ page.og_description }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
   <meta property="og:url"         content="{{ page.url | absolute_url }}" />
   <meta property="og:image"       content="{% if page.og_image %}{{ page.og_image | absolute_url }}{% else %}{{ site.og_image | absolute_url }}{% endif %}" />
   <meta property="og:site_name"   content="Tangyslice Collective" />
 
   <!-- Twitter/X -->
   <meta name="twitter:card"        content="summary_large_image" />
-  <meta name="twitter:title"       content="{% if page.title %}{{ page.title }} — {% endif %}Tangyslice Collective" />
-  <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="twitter:title"       content="{% if page.og_title %}{{ page.og_title }}{% elsif page.title %}{{ page.title }} — Tangyslice Collective{% else %}Tangyslice Collective{% endif %}" />
+  <meta name="twitter:description" content="{% if page.og_description %}{{ page.og_description }}{% elsif page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
   <meta name="twitter:image"       content="{% if page.og_image %}{{ page.og_image | absolute_url }}{% else %}{{ site.og_image | absolute_url }}{% endif %}" />
 
   <!-- Article meta for blog posts -->

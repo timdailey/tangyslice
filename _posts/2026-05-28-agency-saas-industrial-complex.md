@@ -1,7 +1,10 @@
 ---
 layout: blog-post
 title: "The Complex Has a Name"
-description: "What the Agency/SaaS Industrial Complex actually is, how it works, and what it costs you."
+meta_title: "What Is the Agency/SaaS Industrial Complex? | Tangyslice Collective"
+description: "The Agency/SaaS Industrial Complex isn't a conspiracy. It's a system built to perpetuate itself at your expense. Here's how the machine works and what it's actually costing you."
+og_title: "The Complex Has a Name"
+og_description: "Most companies know something is wrong with the way they buy marketing tools and services. This post names it, traces how it works, and maps the exit."
 date: 2026-05-28
 author: tim-dailey
 read_time: 5
