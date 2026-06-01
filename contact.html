@@ -100,6 +100,17 @@ turnstile: true
         aria-label="Contact form"
       >
         <input type="hidden" name="_redirect" value="{{ '/contact/thank-you' | absolute_url }}" />
+
+        <!-- Honeypot — hidden from real users, bots fill it -->
+        <input
+          type="text"
+          name="website"
+          value=""
+          autocomplete="off"
+          tabindex="-1"
+          style="position:absolute;left:-9999px;opacity:0;height:0;width:0;"
+          aria-hidden="true"
+        />
         <div class="contact-form__row">
           <div class="contact-form__field">
             <label class="contact-form__label" for="first-name">First name <span aria-hidden="true">*</span></label>
