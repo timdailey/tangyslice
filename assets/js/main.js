@@ -196,6 +196,41 @@
 })();
 
 
+/* ── Contact form — fetch + redirect ────────────────────────────────────── */
+
+(function () {
+  const form = document.querySelector('.contact-form');
+  if (!form) return;
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const btn = form.querySelector('[type="submit"]');
+    const originalText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    const redirectUrl =
+      (form.querySelector('[name="_redirect"]') || {}).value ||
+      '/contact/thank-you/';
+
+    try {
+      await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        mode: 'no-cors'   // n8n doesn't need to return CORS headers
+      });
+      window.location.href = redirectUrl;
+    } catch (err) {
+      // Network failure — fall back to native POST so the submission isn't lost
+      btn.disabled = false;
+      btn.textContent = originalText;
+      form.submit();
+    }
+  });
+})();
+
+
 /* ── Services jump nav scroll spy ───────────────────────────────────────── */
 
 (function () {
