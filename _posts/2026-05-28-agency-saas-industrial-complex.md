@@ -9,6 +9,15 @@ date: 2026-05-28
 author: tim-dailey
 read_time: 5
 og_image: /assets/img/dispatch/dispatch-test-thumb.webp
+faq:
+  - q: "What is the Agency/SaaS Industrial Complex?"
+    a: "It's the interlocking system of marketing agencies and SaaS vendors whose financial incentives are aligned with each other — not with you. Agencies earn referral fees and implementation revenue from the platforms they recommend. Platforms earn recurring revenue from the clients agencies bring in. The complexity required to run these platforms creates permanent dependency on both. The result is a system that perpetuates itself at your expense."
+  - q: "How do I know if my agency has a financial stake in the tools they recommend?"
+    a: "Ask directly. Most major platforms — HubSpot, Salesforce, Marketo — publish their partner program details publicly. Ask your agency whether they receive referral fees, reseller margins, or implementation bonuses from any platform they've recommended. If they do, that doesn't automatically make the recommendation wrong, but it changes the conversation considerably."
+  - q: "Does this mean all agencies and SaaS tools are bad?"
+    a: "No. The argument isn't that individual tools or agencies are bad — most people inside the complex are competent and acting in good faith. The argument is structural: the financial incentives governing the system produce outcomes that serve the system first, regardless of individual intent. Some tools are genuinely the right fit. The difference is whether the recommendation comes from someone with a financial stake in your answer."
+  - q: "What's the alternative?"
+    a: "Marketing leadership with no financial stake in your stack. Workflows built around how your business actually operates, not a vendor's feature set. And assets — content, positioning, relationships, institutional knowledge — that compound in value over time and don't disappear when you cancel a subscription. It requires more upfront thinking and fewer convenient defaults, but the economics work in your favor instead of the vendor's."
 ---
 
 You've had the meeting. The one where the agency presents the new stack: a CRM here, marketing automation there, an intent data layer on top, an attribution platform to tie it all together. You're nodding along because it sounds reasonable, the deck is polished, and these people clearly know their tools. Two years later you're paying for six platforms, three of which connect to each other only through a fourth, and you have a dedicated internal person whose entire job is keeping the integrations alive.
@@ -64,7 +73,5 @@ The exit is a different model. Marketing leadership that has no financial stake 
 That's what Tangyslice is built around. Not better options inside the complex. A way out of it.
 
 The rest of this blog will get specific: names, numbers, and breakdowns of what the alternative looks like in practice. This post is just the map.
-
----
 
 If you recognized your business somewhere in here, that recognition is worth acting on.

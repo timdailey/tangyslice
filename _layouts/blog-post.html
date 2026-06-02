@@ -151,7 +151,6 @@ layout: base
 
       <!-- FAQ rendered from front matter -->
       {% if page.faq %}
-      <hr class="post-divider" />
       <section id="frequently-asked-questions" aria-labelledby="faq-heading">
         <h2 id="faq-heading">Frequently asked questions</h2>
         {% for item in page.faq %}
@@ -162,8 +161,6 @@ layout: base
         {% endfor %}
       </section>
       {% endif %}
-
-      <hr class="post-divider" />
 
       <!-- CTA -->
       {% include post-cta.html %}
