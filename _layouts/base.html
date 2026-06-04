@@ -8,9 +8,6 @@
    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/814feb2301cc7e744510483b23511a17/script.js"></script> 
    <!-- End cookieyes banner -->
 
-  <!-- Indexing -->
-  {% if page.noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
-
   <!-- Primary meta -->
   <!-- meta_title overrides the <title> tag (search/GEO); falls back to page.title + brand -->
   <title>{% if page.meta_title %}{{ page.meta_title }}{% elsif page.title %}{{ page.title }} — Tangyslice Collective{% else %}Tangyslice Collective{% endif %}</title>

@@ -196,21 +196,91 @@
 })();
 
 
-/* ── Contact form — fetch + redirect ────────────────────────────────────── */
+/* ── Contact form — fetch + redirect + work email validation ────────────── */
 
 (function () {
   const form = document.querySelector('.contact-form');
   if (!form) return;
 
+  // Free / consumer email domains — submissions from these are rejected
+  var BLOCKED_DOMAINS = [
+    'gmail.com','googlemail.com',
+    'yahoo.com','yahoo.co.uk','yahoo.co.jp','yahoo.fr','yahoo.de',
+    'yahoo.es','yahoo.it','yahoo.com.au','yahoo.com.br','yahoo.ca',
+    'hotmail.com','hotmail.co.uk','hotmail.fr','hotmail.de','hotmail.es','hotmail.it',
+    'outlook.com','outlook.co.uk','outlook.fr','outlook.de',
+    'live.com','live.co.uk','live.fr','live.ca',
+    'msn.com',
+    'icloud.com','me.com','mac.com',
+    'aol.com','aim.com',
+    'protonmail.com','proton.me',
+    'qq.com','163.com','126.com','sina.com','sina.cn','sohu.com',
+    'mail.com','email.com',
+    'gmx.com','gmx.net','gmx.de','gmx.at','gmx.ch',
+    'yandex.com','yandex.ru',
+    'rocketmail.com','inbox.com',
+    'mail.ru','list.ru','bk.ru','inbox.ru',
+    'web.de','freenet.de',
+    'libero.it','virgilio.it',
+    'wanadoo.fr','laposte.net','orange.fr','sfr.fr',
+    'naver.com','daum.net','hanmail.net',
+    'rediffmail.com','in.com'
+  ];
+
+  function isBlockedDomain(email) {
+    var parts = email.trim().toLowerCase().split('@');
+    if (parts.length !== 2) return false;
+    return BLOCKED_DOMAINS.indexOf(parts[1]) !== -1;
+  }
+
+  function showEmailError(field, msg) {
+    var existing = field.parentNode.querySelector('.contact-form__error');
+    if (existing) existing.remove();
+    var err = document.createElement('p');
+    err.className = 'contact-form__error';
+    err.style.cssText = 'color:#BF2A1A;font-size:13px;margin-top:6px;font-family:inherit;';
+    err.textContent = msg;
+    field.parentNode.appendChild(err);
+    field.setAttribute('aria-invalid', 'true');
+  }
+
+  function clearEmailError(field) {
+    var existing = field.parentNode.querySelector('.contact-form__error');
+    if (existing) existing.remove();
+    field.removeAttribute('aria-invalid');
+  }
+
+  // Validate on blur so the user gets feedback before hitting submit
+  var emailField = form.querySelector('[name="email"]');
+  if (emailField) {
+    emailField.addEventListener('blur', function () {
+      if (this.value && isBlockedDomain(this.value)) {
+        showEmailError(this, 'Please use your work email address.');
+      } else {
+        clearEmailError(this);
+      }
+    });
+    emailField.addEventListener('input', function () {
+      if (!isBlockedDomain(this.value)) clearEmailError(this);
+    });
+  }
+
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    const btn = form.querySelector('[type="submit"]');
-    const originalText = btn.textContent;
+    // Re-check email domain on submit
+    if (emailField && isBlockedDomain(emailField.value)) {
+      showEmailError(emailField, 'Please use your work email address.');
+      emailField.focus();
+      return;
+    }
+
+    var btn = form.querySelector('[type="submit"]');
+    var originalText = btn.textContent;
     btn.disabled = true;
     btn.textContent = 'Sending…';
 
-    const redirectUrl =
+    var redirectUrl =
       (form.querySelector('[name="_redirect"]') || {}).value ||
       '/contact/thank-you/';
 
