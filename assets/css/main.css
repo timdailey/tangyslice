@@ -991,6 +991,7 @@ body {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   background: var(--rule);
+  border: 1px solid rgba(0,0,0,0.12);
   margin-bottom: var(--space-4);
 }
 
@@ -1581,6 +1582,7 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  border: 1px solid rgba(0,0,0,0.12);
 }
 
 .dispatch-featured__image--placeholder {
@@ -1683,6 +1685,7 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  border: 1px solid rgba(0,0,0,0.12);
 }
 
 .dispatch-archive__thumb--placeholder {

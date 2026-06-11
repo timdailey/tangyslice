@@ -8,7 +8,8 @@ og_description: "Most companies know something is wrong with the way they buy ma
 date: 2026-05-28
 author: tim-dailey
 read_time: 5
-og_image: /assets/img/dispatch/dispatch-test-thumb.webp
+thumb: /assets/img/blog/agency-saas-industrial-complex-thumb.webp
+og_image: /assets/img/blog/agency-saas-industrial-complex-og.webp
 faq:
   - q: "What is the Agency/SaaS Industrial Complex?"
     a: "It's the interlocking system of marketing agencies and SaaS vendors whose financial incentives are aligned with each other — not with you. Agencies earn referral fees and implementation revenue from the platforms they recommend. Platforms earn recurring revenue from the clients agencies bring in. The complexity required to run these platforms creates permanent dependency on both. The result is a system that perpetuates itself at your expense."
