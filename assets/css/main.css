@@ -1458,7 +1458,8 @@ body {
 
 /* ── Masthead ── */
 .dispatch-masthead {
-  padding: var(--space-10) 0 var(--space-9);
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-9);
   border-bottom: 1px solid var(--rule);
 }
 
