@@ -73,15 +73,9 @@ noindex: true
       {% for post in site.posts limit:3 %}
       {% assign post_author = site.data.authors[post.author] %}
       <article class="ty-dispatch__item">
-        {% if post.og_image %}
+        {% if post.thumb or post.og_image %}
         <div class="ty-dispatch__thumb">
-          <img
-            src="{{ post.og_image | relative_url }}"
-            alt="{{ post.title }}"
-            width="320"
-            height="180"
-            loading="lazy"
-          />
+          {% include post-thumb.html post=post width="320" height="180" sizes="(max-width: 768px) 100vw, 320px" %}
         </div>
         {% else %}
         <div class="ty-dispatch__thumb ty-dispatch__thumb--placeholder" aria-hidden="true"></div>

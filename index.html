@@ -154,7 +154,7 @@ description: "The Agency/SaaS Industrial Complex was built for a buyer journey A
     {% assign post_author = site.data.authors[post.author] %}
     <article class="col-item">
       {% if post.thumb or post.og_image %}
-      <img src="{{ post.thumb | default: post.og_image }}" alt="{{ post.title }}" class="dispatch-thumb" width="400" height="225" loading="lazy" />
+      {% include post-thumb.html post=post class="dispatch-thumb" width="400" height="225" sizes="(max-width: 768px) 100vw, 400px" %}
       {% else %}
       <div class="dispatch-thumb" aria-hidden="true"></div>
       {% endif %}

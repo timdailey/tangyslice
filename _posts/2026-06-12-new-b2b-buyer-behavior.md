@@ -43,7 +43,7 @@ Most marketing funnels are still designed for the earlier version of this buyer.
 
 The modern B2B research process runs in a consistent sequence. Understanding each stage tells you where you need to show up and what you need to say when you get there.
 
-![B2B buyer research journey showing five sequential stages from AI query to website visit](/assets/img/blog/new-b2b-buyer-behavior-01.webp)
+![B2B buyer research journey showing five sequential stages from AI query to website visit](/assets/img/blog/new-b2b-buyer-behavior-01.webp){: width="1600" height="873" loading="lazy" decoding="async"}
 
 **AI query first.** The research starts with an AI assistant. ChatGPT, Perplexity, and Claude now field the questions that used to go to Google: what are the best options for X, who are the main vendors in Y space, what should I know about Z before buying. The buyer gets a synthesized overview in minutes. If you don't appear in that answer, you don't enter the consideration set.
 
