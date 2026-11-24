@@ -39,13 +39,13 @@
   {% endif %}
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="{{ '/assets/img/favicon.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/img/favicon-32.png' | relative_url }}">
   <link rel="apple-touch-icon" href="{{ '/assets/img/favicon.png' | relative_url }}">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet" />
+  <!-- Fonts: self-hosted (@font-face in main.css). Preload the latin files used above the fold. -->
+  <link rel="preload" href="{{ '/assets/fonts/teko-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="{{ '/assets/fonts/inter-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="{{ '/assets/fonts/ibm-plex-serif-400-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin />
 
   <!-- Styles -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
