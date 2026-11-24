@@ -1,0 +1,88 @@
+<!-- Site-wide entity schema: who Tangyslice is, who runs it, what it offers.
+     Stable @ids let blog Article markup and other pages point at the same entities. -->
+{%- assign frank = site.data.authors['frank-days'] -%}
+{%- assign tim = site.data.authors['tim-dailey'] -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": "{{ site.url }}/#organization",
+      "name": "Tangyslice Collective",
+      "legalName": "Tangyslice Collective LLC",
+      "url": "{{ site.url }}/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ '/assets/img/logo-tangyslice-light.webp' | absolute_url }}"
+      },
+      "description": "Two-person fractional CMO and AI-native marketing consultancy for lean SMB tech companies: AI search visibility, custom AI marketing workflows, demand generation, customer advocacy and fractional CMO leadership.",
+      "foundingDate": "2026",
+      "areaServed": "US",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "MA",
+        "addressCountry": "US"
+      },
+      "founder": [
+        { "@id": "{{ site.url }}/about/#frank-days" },
+        { "@id": "{{ site.url }}/about/#tim-dailey" }
+      ],
+      "knowsAbout": [
+        "Generative engine optimization",
+        "AI search visibility",
+        "B2B demand generation",
+        "Fractional CMO",
+        "Marketing automation",
+        "AI marketing workflows"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "url": "{{ '/contact/' | absolute_url }}"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "url": "{{ '/services/' | absolute_url }}",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI visibility & generative search optimization", "url": "{{ '/services/#visibility' | absolute_url }}" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI-powered marketing systems", "url": "{{ '/services/#systems' | absolute_url }}" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Demand generation & dark funnel strategy", "url": "{{ '/services/#demand' | absolute_url }}" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Customer advocacy", "url": "{{ '/services/#advocacy' | absolute_url }}" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fractional CMO", "url": "{{ '/services/#cmo' | absolute_url }}" } }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "name": "Tangyslice Collective",
+      "url": "{{ site.url }}/",
+      "publisher": { "@id": "{{ site.url }}/#organization" }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}/about/#frank-days",
+      "name": {{ frank.name | jsonify }},
+      "jobTitle": {{ frank.role | jsonify }},
+      "description": {{ frank.bio | jsonify }},
+      "image": "{{ frank.avatar | absolute_url }}",
+      "url": "{{ '/about/' | absolute_url }}",
+      "sameAs": [{{ frank.linkedin | jsonify }}],
+      "worksFor": { "@id": "{{ site.url }}/#organization" }
+    },
+    {
+      "@type": "Person",
+      "@id": "{{ site.url }}/about/#tim-dailey",
+      "name": {{ tim.name | jsonify }},
+      "jobTitle": {{ tim.role | jsonify }},
+      "description": {{ tim.bio | jsonify }},
+      "image": "{{ tim.avatar | absolute_url }}",
+      "url": "{{ '/about/' | absolute_url }}",
+      "sameAs": [{{ tim.linkedin | jsonify }}],
+      "worksFor": { "@id": "{{ site.url }}/#organization" }
+    }
+  ]
+}
+</script>

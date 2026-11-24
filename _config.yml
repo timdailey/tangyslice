@@ -45,3 +45,11 @@ exclude:
   - README.md
   - .gitignore
   - vendor/
+
+# Plugins
+plugins:
+  - jekyll-redirect-from
+
+# Legacy URL redirects are declared with redirect_from in each target page's front matter
+redirect_from:
+  json: false
