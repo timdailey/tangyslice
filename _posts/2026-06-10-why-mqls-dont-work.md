@@ -3,11 +3,12 @@ redirect_from:
   - /2008/11/11/customer-retention-metrics/
 layout: blog-post
 title: "The MQL Was Always a Fiction"
-meta_title: "Why Marketing Qualified Leads Don't Work | Tangyslice"
+meta_title: "MQL vs SQL: Why Marketing Qualified Leads Don't Work | Tangyslice"
 description: "The MQL wasn't killed by bad campaigns. It was a metric the system gamed from the start. Here's why the numbers never matched the pipeline."
 og_title: "The MQL Was Always a Fiction"
 og_description: "Strong MQL numbers, weak pipeline. Every marketing leader has felt it. This post explains why the metric was broken before your campaigns were."
 date: 2026-06-10
+last_modified_at: 2026-11-24
 author: tim-dailey
 read_time: 5
 thumb: /assets/img/blog/why-mqls-dont-work-thumb.webp
@@ -30,6 +31,27 @@ faq:
 A marketing qualified lead is a contact who has shown enough behavioral interest — visiting certain pages, downloading content, hitting a lead score threshold — to be flagged as ready for sales follow-up. Marketing qualified leads were designed to solve a real problem: sales teams were drowning in unqualified contacts, and marketing needed a filter. For a window of time, the system worked.
 
 That window closed long before most teams admitted it.
+
+## MQL vs SQL: the difference at a glance
+
+A **marketing qualified lead (MQL)** is a contact marketing has flagged as interested, based on behavior such as page visits, downloads, and lead score. A **sales qualified lead (SQL)** is a contact a salesperson has reviewed and confirmed as a real buying opportunity, usually with a known need, budget, and timeline. The MQL measures interest; the SQL measures intent.
+
+<div class="table-scroll">
+<table>
+  <thead>
+    <tr><th scope="col"></th><th scope="col">MQL</th><th scope="col">SQL</th></tr>
+  </thead>
+  <tbody>
+    <tr><th scope="row">Who qualifies it</th><td>Marketing, usually automatically</td><td>Sales, after a conversation or review</td></tr>
+    <tr><th scope="row">Based on</th><td>Behavior and lead score: visits, opens, downloads, and form fills</td><td>Confirmed need, authority, budget, and timing</td></tr>
+    <tr><th scope="row">What it tells you</th><td>Someone is paying attention</td><td>Someone may actually buy</td></tr>
+    <tr><th scope="row">Next step</th><td>Nurture, or hand to sales for follow-up</td><td>Opportunity created in the pipeline</td></tr>
+    <tr><th scope="row">Typical conversion</th><td>About 13% of B2B SaaS MQLs become SQLs</td><td>About 25 to 30% of SQLs close</td></tr>
+  </tbody>
+</table>
+</div>
+
+That 13% is the whole story in one number. Most of what marketing counted as demand never became something sales could use. The rest of this post explains why the MQL was broken from the start, and what to measure instead.
 
 ## Where the MQL came from
 
