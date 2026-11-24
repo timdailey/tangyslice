@@ -1,0 +1,41 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+# Tangyslice Collective
+
+> Tangyslice Collective LLC is a two-person fractional CMO and AI-native marketing consultancy based in Massachusetts, USA, founded in 2026 by Frank Days and Tim Dailey. It works with lean SMB tech companies whose inbound lead flow has dried up as B2B buyers moved their research into AI assistants, peer communities and private channels. Instead of agency retainers and rented SaaS, it builds AI workflows, content and marketing systems the client owns.
+
+## Who we serve
+
+- Small and mid-sized B2B technology companies with lean marketing teams
+- Companies whose pipeline slowed even though SEO and inbound spend stayed the same
+- Leaders who want senior marketing leadership and working systems, not a strategy deck
+
+Not a fit: enterprises with large in-house marketing teams, companies committed to the inbound/MQL playbook, PE-backed companies with enterprise procurement cycles, and teams looking for a vendor to execute a predetermined strategy.
+
+## Services
+
+- [AI visibility & generative search optimization]({{ '/services/#visibility' | absolute_url }}): entity building, structured content and AI citation audits so the brand shows up in ChatGPT, Perplexity, Claude, Gemini and Google AI Overviews.
+- [AI-powered marketing systems]({{ '/services/#systems' | absolute_url }}): custom AI workflows for targeting, lead intelligence and content production that run in the client's own stack and on its data.
+- [Demand generation & dark funnel strategy]({{ '/services/#demand' | absolute_url }}): reaching buyers where they research before they ever fill in a form.
+- [Customer advocacy]({{ '/services/#advocacy' | absolute_url }}): turning customers into referrals, reviews and proof.
+- [Fractional CMO]({{ '/services/#cmo' | absolute_url }}): an embedded senior marketing leader who owns outcomes, aligns the team and reports to the board.
+
+## Founders
+
+{% for pair in site.data.authors %}{% assign a = pair[1] %}- {{ a.name }}, {{ a.role }}: {{ a.bio }} ({{ a.linkedin }})
+{% endfor %}
+## Key pages
+
+- [Home]({{ '/' | absolute_url }})
+- [Services]({{ '/services/' | absolute_url }})
+- [About]({{ '/about/' | absolute_url }})
+- [Manifesto]({{ '/manifesto/' | absolute_url }}): why the Agency/SaaS Industrial Complex no longer fits how B2B buyers decide
+- [Contact]({{ '/contact/' | absolute_url }})
+
+## Writing
+
+{% for post in site.posts %}- [{{ post.title }}]({{ post.url | absolute_url }}): {{ post.description }}
+{% endfor %}

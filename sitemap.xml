@@ -18,6 +18,7 @@ layout: null
     {% for ex in excluded %}
       {% if page.url contains ex %}{% assign skip = true %}{% endif %}
     {% endfor %}
+    {% if page.sitemap == false or page.noindex or page.redirect or page.url contains '.txt' or page.url contains '.json' %}{% assign skip = true %}{% endif %}
     {% if skip == false and page.url != '/' %}
     <url>
       <loc>{{ site.url }}{{ page.url }}</loc>

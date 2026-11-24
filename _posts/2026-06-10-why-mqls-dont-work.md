@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /2008/11/11/customer-retention-metrics/
 layout: blog-post
 title: "The MQL Was Always a Fiction"
 meta_title: "Why Marketing Qualified Leads Don't Work | Tangyslice"
@@ -71,4 +73,4 @@ This is what the MQL obscured for twenty years: real demand was always more sele
 
 If your pipeline has stopped reflecting your MQL numbers, it's not a campaign problem.
 
-Tangyslice works with lean tech companies rebuilding demand generation for the post-inbound era. If you want to understand what that looks like for your specific market, [let's talk](/contact).
+Tangyslice works with lean tech companies rebuilding demand generation for the post-inbound era. If you want to understand what that looks like for your specific market, [let's talk](/contact/).

@@ -13,11 +13,11 @@
       </a>
 
       <ul class="nav__links">
-        <li><a href="{{ '/manifesto' | relative_url }}" {% if page.url == '/manifesto/' %}aria-current="page"{% endif %}>Manifesto</a></li>
-        <li><a href="{{ '/services' | relative_url }}" {% if page.url == '/services/' %}aria-current="page"{% endif %}>Services</a></li>
-        <li><a href="{{ '/blog' | relative_url }}" {% if page.url contains '/blog' %}aria-current="page"{% endif %}>Blog</a></li>
-        <li><a href="{{ '/about' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
-        <li><a href="{{ '/contact' | relative_url }}" class="nav__cta" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a></li>
+        <li><a href="{{ '/manifesto/' | relative_url }}" {% if page.url == '/manifesto/' %}aria-current="page"{% endif %}>Manifesto</a></li>
+        <li><a href="{{ '/services/' | relative_url }}" {% if page.url == '/services/' %}aria-current="page"{% endif %}>Services</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog' %}aria-current="page"{% endif %}>Blog</a></li>
+        <li><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}" class="nav__cta" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a></li>
       </ul>
 
       <button class="nav__mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-drawer">
@@ -29,11 +29,11 @@
     </div>
 
     <div class="nav__drawer" id="nav-drawer" role="menu">
-      <a href="{{ '/manifesto' | relative_url }}" role="menuitem" {% if page.url == '/manifesto/' %}aria-current="page"{% endif %}>Manifesto</a>
-      <a href="{{ '/services' | relative_url }}" role="menuitem" {% if page.url == '/services/' %}aria-current="page"{% endif %}>Services</a>
-      <a href="{{ '/blog' | relative_url }}" role="menuitem" {% if page.url contains '/blog' %}aria-current="page"{% endif %}>Blog</a>
-      <a href="{{ '/about' | relative_url }}" role="menuitem" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a>
-      <a href="{{ '/contact' | relative_url }}" class="nav__cta" role="menuitem" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a>
+      <a href="{{ '/manifesto/' | relative_url }}" role="menuitem" {% if page.url == '/manifesto/' %}aria-current="page"{% endif %}>Manifesto</a>
+      <a href="{{ '/services/' | relative_url }}" role="menuitem" {% if page.url == '/services/' %}aria-current="page"{% endif %}>Services</a>
+      <a href="{{ '/blog/' | relative_url }}" role="menuitem" {% if page.url contains '/blog' %}aria-current="page"{% endif %}>Blog</a>
+      <a href="{{ '/about/' | relative_url }}" role="menuitem" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a>
+      <a href="{{ '/contact/' | relative_url }}" class="nav__cta" role="menuitem" {% if page.url == '/contact/' %}aria-current="page"{% endif %}>Contact</a>
     </div>
 
   </nav>

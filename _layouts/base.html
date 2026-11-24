@@ -12,7 +12,7 @@
   <!-- meta_title overrides the <title> tag (search/GEO); falls back to page.title + brand -->
   <title>{% if page.meta_title %}{{ page.meta_title }}{% elsif page.title %}{{ page.title }} — Tangyslice Collective{% else %}Tangyslice Collective{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="{% if page.noindex %}noindex, follow{% else %}index, follow{% endif %}" />
 
   <!-- Canonical -->
   <link rel="canonical" href="{{ page.url | absolute_url }}" />
@@ -49,6 +49,9 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+
+  <!-- Structured data -->
+  {% include schema-org.html %}
 
     <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RS9GZLZ65"></script>

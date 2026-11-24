@@ -1,4 +1,6 @@
 ---
+redirect_from:
+  - /2009/09/10/man-cant-live-on-inbound-marketing-alone/
 layout: blog-post
 title: "2023 Was the Last Year the Old Playbook Worked"
 meta_title: "2023 Was the Last Year the Old Playbook Worked | Tangyslice Collective"
@@ -21,7 +23,7 @@ faq:
     a: "The clearest sign is a dashboard that looks fine while sales complains the leads aren't real. If your MQL count is stable but close rates or deal quality have slipped, you're likely optimizing a number that stopped meaning what it used to."
 ---
 
-You already know the [MQL was fiction](/blog/why-mqls-dont-work). You already know [the retainer was a trap](/manifesto). We've told you both.
+You already know the [MQL was fiction](/blog/why-mqls-dont-work/). You already know [the retainer was a trap](/manifesto/). We've told you both.
 
 What we haven't told you is when it actually happened. Not the slow decline everyone points to. The specific window where the machine stopped working and nobody in the room was willing to say so.
 
@@ -59,6 +61,6 @@ Tearing that down meant writing off the spend and telling the board the strategy
 
 A slump means wait it out. A structural break means the old math doesn't compute anymore, no matter how patient you are.
 
-You don't fix this by tightening the same funnel. You fix it by building for how buyers actually research now: AI-visible content, tools that prove your thinking before a call ever happens, and a brand people trust enough to name when someone asks an AI who to call. That's the shift we build [fractional CMO engagements](/services#cmo) around, and it's why we build [tools you own instead of tools you rent](/services#visibility).
+You don't fix this by tightening the same funnel. You fix it by building for how buyers actually research now: AI-visible content, tools that prove your thinking before a call ever happens, and a brand people trust enough to name when someone asks an AI who to call. That's the shift we build [fractional CMO engagements](/services/#cmo) around, and it's why we build [tools you own instead of tools you rent](/services/#visibility).
 
 The leads that vanished weren't a bad quarter. They were the last signal that the old system was already gone.

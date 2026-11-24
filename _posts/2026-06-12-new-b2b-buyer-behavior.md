@@ -61,11 +61,11 @@ The email nurture sequence was built for a buyer who entered at awareness and ne
 
 That model made sense when buyers were early in their research when they first contacted you. It makes no sense for a buyer who has already completed their research, formed an opinion, and is now evaluating whether to take a call. Sending them a welcome sequence about the basics of a problem they spent an afternoon researching is not nurturing. It's friction.
 
-This is the [Agency/SaaS Industrial Complex](/blog/agency-saas-industrial-complex/) running on inertia: a system built for a buyer journey that no longer exists, still charging for the contacts in the sequence. The [MQL](/blog/why-mqls-dont-work) the form fill generated was not an early-stage signal. It was a late-stage signal. The buyer who filled out the form had already decided you were worth a conversation. The nurture sequence treated them like they had just discovered you.
+This is the [Agency/SaaS Industrial Complex](/blog/agency-saas-industrial-complex/) running on inertia: a system built for a buyer journey that no longer exists, still charging for the contacts in the sequence. The [MQL](/blog/why-mqls-dont-work/) the form fill generated was not an early-stage signal. It was a late-stage signal. The buyer who filled out the form had already decided you were worth a conversation. The nurture sequence treated them like they had just discovered you.
 
 ## The confirmation role
 
-If your website is a discovery layer, it needs comprehensive content, broad messaging, and clear category education. If it's a confirmation layer, which it now is, it needs something different: clarity, specificity, and [a point of view](/manifesto) sharp enough to confirm or disqualify you quickly.
+If your website is a discovery layer, it needs comprehensive content, broad messaging, and clear category education. If it's a confirmation layer, which it now is, it needs something different: clarity, specificity, and [a point of view](/manifesto/) sharp enough to confirm or disqualify you quickly.
 
 The questions a confirmation-stage buyer asks are not "what does this company do?" They are: does this company understand my specific problem? Do they have a position I can evaluate? Have they done this for a company like mine? Are these people credible?
 
@@ -81,12 +81,12 @@ Trust with the research-first buyer is built before they contact you, in the cha
 
 **Point of view.** The buyer checks LinkedIn and peer communities partly to see whether you have a perspective worth engaging with. A consistent, expressed point of view on how your market works, one that matches what they've already heard from peers, confirms credibility. The absence of one confirms nothing.
 
-**[AI visibility](/services#visibility) in the right places.** Showing up in AI-generated answers when buyers are forming their consideration set is no longer optional for B2B companies in competitive categories. If the AI assistant summarizing your space does not mention you, you are not in the early research.
+**[AI visibility](/services/#visibility) in the right places.** Showing up in AI-generated answers when buyers are forming their consideration set is no longer optional for B2B companies in competitive categories. If the AI assistant summarizing your space does not mention you, you are not in the early research.
 
-**Peer presence in the [dark funnel](/services#demand).** The community thread where someone asks for a vendor recommendation is worth more than most paid campaigns. Getting mentioned organically in the places your buyers trust requires being genuinely present in those spaces over time, not launching a one-off community seeding effort.
+**Peer presence in the [dark funnel](/services/#demand).** The community thread where someone asks for a vendor recommendation is worth more than most paid campaigns. Getting mentioned organically in the places your buyers trust requires being genuinely present in those spaces over time, not launching a one-off community seeding effort.
 
 The buyer who already knows what they want is not harder to sell to. They're easier, if you showed up correctly during the research phase.
 
 If your best sales conversations start with buyers who already know your positioning, that's not luck. It's a model worth building deliberately.
 
-The research phase is where that model gets built: the AI queries, the peer communities, the review platforms, the LinkedIn signal. Tangyslice helps lean tech companies show up in those places before first contact. If you want to understand what that looks like for your market, [let's talk](/contact).
+The research phase is where that model gets built: the AI queries, the peer communities, the review platforms, the LinkedIn signal. Tangyslice helps lean tech companies show up in those places before first contact. If you want to understand what that looks like for your market, [let's talk](/contact/).
