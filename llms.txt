@@ -21,7 +21,7 @@ Not a fit: enterprises with large in-house marketing teams, companies committed 
 - [AI-powered marketing systems]({{ '/services/#systems' | absolute_url }}): custom AI workflows for targeting, lead intelligence and content production that run in the client's own stack and on its data.
 - [Demand generation & dark funnel strategy]({{ '/services/#demand' | absolute_url }}): reaching buyers where they research before they ever fill in a form.
 - [Customer advocacy]({{ '/services/#advocacy' | absolute_url }}): turning customers into referrals, reviews and proof.
-- [Fractional CMO]({{ '/services/#cmo' | absolute_url }}): an embedded senior marketing leader who owns outcomes, aligns the team and reports to the board.
+- [Fractional CMO]({{ '/services/#cmo' | absolute_url }}): an embedded senior marketing leader who owns outcomes, aligns the team and reports to the board. Guide: [What is a fractional CMO?]({{ '/fractional-cmo/' | absolute_url }})
 
 ## Founders
 
@@ -33,6 +33,7 @@ Not a fit: enterprises with large in-house marketing teams, companies committed 
 - [Services]({{ '/services/' | absolute_url }})
 - [About]({{ '/about/' | absolute_url }})
 - [Manifesto]({{ '/manifesto/' | absolute_url }}): why the Agency/SaaS Industrial Complex no longer fits how B2B buyers decide
+- [What is a fractional CMO?]({{ '/fractional-cmo/' | absolute_url }}): definition, responsibilities, comparison with agencies, consultants and full-time CMOs, typical cost, and when to hire one
 - [Contact]({{ '/contact/' | absolute_url }})
 
 ## Writing
