@@ -1,0 +1,31 @@
+{%- comment -%}
+  Responsive post thumbnail.
+  Params: post, sizes, width, height, loading (default lazy), class, fetchpriority
+  Thumbs should be 960x540 webp. If a 320x180 copy named <name>-320.webp sits
+  beside it, a srcset is added so small slots download the small file.
+{%- endcomment -%}
+{%- assign t_post = include.post -%}
+{%- assign t_src = t_post.thumb | default: t_post.og_image -%}
+{%- assign t_small = nil -%}
+{%- if t_post.thumb -%}
+  {%- assign t_small_path = t_post.thumb | replace: '.webp', '-320.webp' -%}
+  {%- assign t_small = site.static_files | where: "path", t_small_path | first -%}
+{%- endif -%}
+<img
+  src="{{ t_src | relative_url }}"
+  {%- if t_small %}
+  srcset="{{ t_small.path | relative_url }} 320w, {{ t_post.thumb | relative_url }} 960w"
+  sizes="{{ include.sizes }}"
+  {%- endif %}
+  alt="{{ t_post.title }}"
+  {%- if include.class %}
+  class="{{ include.class }}"
+  {%- endif %}
+  width="{{ include.width }}"
+  height="{{ include.height }}"
+  loading="{{ include.loading | default: 'lazy' }}"
+  decoding="async"
+  {%- if include.fetchpriority %}
+  fetchpriority="{{ include.fetchpriority }}"
+  {%- endif %}
+/>

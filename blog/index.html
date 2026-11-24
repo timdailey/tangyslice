@@ -32,13 +32,7 @@ permalink: /blog/
     <div class="dispatch-featured__inner">
       {% if featured.thumb or featured.og_image %}
       <div class="dispatch-featured__image">
-        <img
-          src="{{ featured.thumb | default: featured.og_image }}"
-          alt="{{ featured.title }}"
-          width="480"
-          height="270"
-          loading="eager"
-        />
+        {% include post-thumb.html post=featured width="480" height="270" loading="eager" fetchpriority="high" sizes="(max-width: 600px) 100vw, 480px" %}
       </div>
       {% else %}
       <div class="dispatch-featured__image dispatch-featured__image--placeholder" aria-hidden="true"></div>
@@ -89,13 +83,7 @@ permalink: /blog/
       <a href="{{ post.url }}" class="dispatch-archive__item">
         <div class="dispatch-archive__thumb">
           {% if post.thumb or post.og_image %}
-          <img
-            src="{{ post.thumb | default: post.og_image }}"
-            alt="{{ post.title }}"
-            width="160"
-            height="90"
-            loading="lazy"
-          />
+          {% include post-thumb.html post=post width="160" height="90" sizes="160px" %}
           {% else %}
           <div class="dispatch-archive__thumb--placeholder" aria-hidden="true"></div>
           {% endif %}
