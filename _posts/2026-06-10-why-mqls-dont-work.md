@@ -34,7 +34,7 @@ That window closed long before most teams admitted it.
 
 ## MQL vs SQL: the difference at a glance
 
-A **marketing qualified lead (MQL)** is a contact marketing has flagged as interested, based on behavior such as page visits, downloads and lead score. A **sales qualified lead (SQL)** is a contact a salesperson has reviewed and confirmed as a real buying opportunity, usually with a known need, budget and timeline. The MQL measures interest; the SQL measures intent.
+A **marketing qualified lead (MQL)** is a contact marketing has flagged as interested, based on behavior such as page visits, downloads, and lead score. A **sales qualified lead (SQL)** is a contact a salesperson has reviewed and confirmed as a real buying opportunity, usually with a known need, budget, and timeline. The MQL measures interest; the SQL measures intent.
 
 <div class="table-scroll">
 <table>
@@ -43,7 +43,7 @@ A **marketing qualified lead (MQL)** is a contact marketing has flagged as inter
   </thead>
   <tbody>
     <tr><th scope="row">Who qualifies it</th><td>Marketing, usually automatically</td><td>Sales, after a conversation or review</td></tr>
-    <tr><th scope="row">Based on</th><td>Behavior and lead score: visits, opens, downloads, form fills</td><td>Confirmed need, authority, budget and timing</td></tr>
+    <tr><th scope="row">Based on</th><td>Behavior and lead score: visits, opens, downloads, and form fills</td><td>Confirmed need, authority, budget, and timing</td></tr>
     <tr><th scope="row">What it tells you</th><td>Someone is paying attention</td><td>Someone may actually buy</td></tr>
     <tr><th scope="row">Next step</th><td>Nurture, or hand to sales for follow-up</td><td>Opportunity created in the pipeline</td></tr>
     <tr><th scope="row">Typical conversion</th><td>About 13% of B2B SaaS MQLs become SQLs</td><td>About 25 to 30% of SQLs close</td></tr>
