@@ -655,7 +655,7 @@ body {
 
 .footer__top {
   display: grid;
-  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr;
   gap: var(--space-9);
   margin-bottom: var(--space-9);
 }
@@ -2174,6 +2174,56 @@ body {
 
 .post-content strong { font-weight: 600; }
 .post-content em     { font-style: italic; }
+
+/* Tables in long-form content (comparison and pricing tables in guides).
+   Wrapped in .table-scroll so wide tables scroll inside the column on phones. */
+/* Grid items default to min-width: auto, so a wide table would stretch the
+   column past the viewport; let the column shrink and the table scroll instead. */
+.post-content { min-width: 0; }
+
+.table-scroll {
+  overflow-x: auto;
+  margin: var(--space-6) 0 var(--space-7);
+  -webkit-overflow-scrolling: touch;
+}
+
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-ui);
+  font-size: var(--text-ui-md);
+  line-height: 1.5;
+  color: var(--dark);
+}
+
+.post-content th,
+.post-content td {
+  text-align: left;
+  vertical-align: top;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--rule);
+}
+
+.post-content thead th {
+  font-weight: 600;
+  font-size: var(--text-ui-sm);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--brown);
+  border-bottom: 2px solid var(--dark);
+}
+
+.post-content tbody th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.post-content .table-note {
+  font-family: var(--font-ui);
+  font-size: var(--text-ui-sm);
+  color: var(--brown);
+  margin-top: calc(-1 * var(--space-5));
+}
 
 .post-divider {
   height: 1px;

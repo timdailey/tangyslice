@@ -3,6 +3,11 @@ layout: base
 ---
 
 {% assign author = site.data.authors[page.author] %}
+{% comment %} Evergreen guides (e.g. /fractional-cmo/) reuse this layout as pages:
+   `breadcrumb_parent: none` drops the Blog crumb, `last_modified_at` shows "Updated <date>",
+   and `toc_label` renames the table of contents. {% endcomment %}
+{% assign in_blog = true %}{% if page.breadcrumb_parent == "none" %}{% assign in_blog = false %}{% endif %}
+{% assign toc_label = page.toc_label | default: "In this post" %}
 
 {% comment %} ── Schema JSON-LD ── {% endcomment %}
 {% capture schema_block %}
@@ -49,15 +54,15 @@ layout: base
           "name": "Home",
           "item": "{{ site.url }}"
         },
-        {
+        {% if in_blog %}{
           "@type": "ListItem",
           "position": 2,
           "name": "Blog",
-          "item": "{{ site.url }}/blog"
-        },
+          "item": "{{ site.url }}/blog/"
+        },{% endif %}
         {
           "@type": "ListItem",
-          "position": 3,
+          "position": {% if in_blog %}3{% else %}2{% endif %},
           "name": {{ page.title | jsonify }},
           "item": "{{ page.url | absolute_url }}"
         }
@@ -92,9 +97,9 @@ layout: base
   <div class="container">
     <ol class="post-breadcrumb__list">
       <li><a href="/">Home</a></li>
-      <li aria-hidden="true">›</li>
+      {% if in_blog %}<li aria-hidden="true">›</li>
       <li><a href="/blog/">Blog</a></li>
-      <li aria-hidden="true">›</li>
+      {% endif %}      <li aria-hidden="true">›</li>
       <li aria-current="page">{{ page.title }}</li>
     </ol>
   </div>
@@ -112,7 +117,11 @@ layout: base
     <p class="post-header__desc">{{ page.description }}</p>
     {% endif %}
     <p class="post-header__meta">
+      {% if page.last_modified_at %}
+      <span>Updated <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: "%B %-d, %Y" }}</time></span>
+      {% else %}
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      {% endif %}
       {% if author.name %}
       <span class="post-header__meta-sep" aria-hidden="true">·</span>
       <span>{{ author.name }}</span>
@@ -134,7 +143,7 @@ layout: base
     aria-controls="toc-mobile-drawer"
     id="toc-mobile-btn"
   >
-    <span class="toc-mobile__label">In this post</span>
+    <span class="toc-mobile__label">{{ toc_label }}</span>
     <span class="toc-mobile__chevron" aria-hidden="true">▼</span>
   </button>
   <div class="toc-mobile__drawer" id="toc-mobile-drawer" role="list">
@@ -234,7 +243,7 @@ layout: base
     <!-- ── Desktop sidebar TOC ── -->
     <aside class="post-sidebar" aria-label="Table of contents" id="post-sidebar">
       <nav class="sidebar-toc" aria-labelledby="toc-heading">
-        <p class="sidebar-toc__label" id="toc-heading">In this post</p>
+        <p class="sidebar-toc__label" id="toc-heading">{{ toc_label }}</p>
         <ol class="sidebar-toc__list" id="sidebar-toc-list">
           <!-- Populated by JS -->
         </ol>

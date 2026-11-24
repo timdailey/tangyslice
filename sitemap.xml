@@ -22,6 +22,7 @@ layout: null
     {% if skip == false and page.url != '/' %}
     <url>
       <loc>{{ site.url }}{{ page.url }}</loc>
+      {% if page.last_modified_at %}<lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>{% endif %}
       {% if page.url contains '/services' or page.url contains '/blog' %}
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
