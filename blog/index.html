@@ -34,27 +34,6 @@ permalink: /blog/
 </section>
 
 
-<!-- ───────── GUIDES ─────────
-     Evergreen guides are root pages (not posts) that set category: "Guide". -->
-{% assign guides = site.pages | where: "category", "Guide" | sort: "title" %}
-{% if guides.size > 0 %}
-<section class="dispatch-guides" aria-labelledby="guides-heading">
-  <div class="container">
-    <p class="dispatch-guides__label" id="guides-heading">Guides</p>
-    <div class="dispatch-guides__list">
-      {% for guide in guides %}
-      <a href="{{ guide.url | relative_url }}" class="dispatch-guide">
-        <h2 class="dispatch-guide__title">{{ guide.title }}</h2>
-        {% if guide.description %}<p class="dispatch-guide__desc">{{ guide.description }}</p>{% endif %}
-        <p class="dispatch-guide__meta">{% if guide.read_time %}{{ guide.read_time }} min read · {% endif %}Read the guide →</p>
-      </a>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-{% endif %}
-
-
 <!-- ───────── FEATURED ISSUE ───────── -->
 {% assign featured = site.posts.first %}
 {% if featured %}
@@ -151,6 +130,27 @@ permalink: /blog/
     {% endif %}
   </div>
 </section>
+
+
+<!-- ───────── GUIDES ─────────
+     Evergreen guides are root pages (not posts) that set category: "Guide". -->
+{% assign guides = site.pages | where: "category", "Guide" | sort: "title" %}
+{% if guides.size > 0 %}
+<section class="dispatch-guides" aria-labelledby="guides-heading">
+  <div class="container">
+    <p class="dispatch-guides__label" id="guides-heading">Guides</p>
+    <div class="dispatch-guides__list">
+      {% for guide in guides %}
+      <a href="{{ guide.url | relative_url }}" class="dispatch-guide">
+        <h2 class="dispatch-guide__title">{{ guide.title }}</h2>
+        {% if guide.description %}<p class="dispatch-guide__desc">{{ guide.description }}</p>{% endif %}
+        <p class="dispatch-guide__meta">{% if guide.read_time %}{{ guide.read_time }} min read · {% endif %}Read the guide →</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
 
 
 <!-- ───────── FOOTER CTA ───────── -->
