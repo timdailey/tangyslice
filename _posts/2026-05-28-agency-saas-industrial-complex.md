@@ -69,7 +69,7 @@ You didn't build marketing infrastructure. You rented it. At prices designed to 
 
 This is the conclusion the complex is designed to prevent you from reaching: the problem isn't solvable by finding a cheaper agency or a more transparent tool. The incentive structure at the heart of the agency/tool relationship replicates itself regardless of which specific vendors you work with. The names on the invoices change. The loop stays the same.
 
-The exit is a different model. Marketing leadership that has no financial stake in your stack. Workflows built around how your business actually operates, producing assets — content, positioning, relationships, institutional knowledge that compounds over time and doesn't disappear when you stop paying a monthly subscription.
+The exit is a different model. [Marketing leadership that has no financial stake in your stack](/fractional-cmo/). Workflows built around how your business actually operates, producing assets — content, positioning, relationships, institutional knowledge that compounds over time and doesn't disappear when you stop paying a monthly subscription.
 
 That's what Tangyslice is built around. Not better options inside the complex. A way out of it.
 

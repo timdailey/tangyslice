@@ -79,15 +79,15 @@ What the dashboard showed was volume. What the volume actually contained was a m
 
 The MQL's longevity was not accidental. The platforms tracking and reporting MQL counts had a financial interest in keeping the metric alive and growing.
 
-Marketing automation pricing is built on contact volume. More leads in the system means more contacts, a higher subscription tier, and more revenue for the platform. This is the Agency/SaaS Industrial Complex operating in one of its most direct forms: the tool measuring your marketing performance is priced to reward you for generating more contacts, regardless of quality.
+Marketing automation pricing is built on contact volume. More leads in the system means more contacts, a higher subscription tier, and more revenue for the platform. This is the [Agency/SaaS Industrial Complex](/blog/agency-saas-industrial-complex/) operating in one of its most direct forms: the tool measuring your marketing performance is priced to reward you for generating more contacts, regardless of quality.
 
 HubSpot does not make more money when your pipeline closes. It makes more money when your contact list grows. Marketo does not benefit from helping you identify which 10% of your MQLs are worth pursuing. It benefits from helping you generate more of them. The incentive was never aligned with your outcome. It was aligned with your volume.
 
 ## What a real demand signal looks like
 
-A real demand signal in 2026 looks different from a form fill. It looks like a buyer who found you through an AI search result and arrived already knowing your positioning. It looks like a referral from a peer community where your name came up without prompting. It looks like a sales call where the prospect has already read your case studies and is asking about implementation timelines, not product basics.
+A real demand signal in 2026 looks different from a form fill. It looks like [a buyer who found you through an AI search result](/blog/new-b2b-buyer-behavior/) and arrived already knowing your positioning. It looks like a referral from a peer community where your name came up without prompting. It looks like a sales call where the prospect has already read your case studies and is asking about implementation timelines, not product basics.
 
-None of these show up in a traditional MQL dashboard. Most of them never fill out a form. They live in the dark funnel — the channels where B2B buying decisions actually form, invisible to legacy attribution models and uncountable in the metrics the complex built to track them.
+None of these show up in a traditional MQL dashboard. Most of them never fill out a form. They live in the [dark funnel](/services/#demand) — the channels where B2B buying decisions actually form, invisible to legacy attribution models and uncountable in the metrics the complex built to track them.
 
 This is what the MQL obscured for twenty years: real demand was always more selective, more peer-influenced, and harder to manufacture than the platforms wanted you to believe. The form fill was a proxy. The proxy became the goal. The goal stopped connecting to revenue long before most teams were willing to say it plainly.
 

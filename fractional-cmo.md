@@ -127,7 +127,7 @@ Hire a fractional CMO when marketing needs an owner and a full-time executive wo
 
 - You don't have a head of marketing, and the CEO is still making every marketing call between sales meetings.
 - You have marketers executing without a clear strategy. Activity is up. Pipeline isn't.
-- Pipeline slowed and nobody can explain what changed, even though spend stayed the same.
+- Pipeline slowed and nobody can explain what changed, even though spend stayed the same. (We traced when that break happened in [2023 Was the Last Year the Old Playbook Worked](/blog/2023-was-the-last-year-it-worked/).)
 - You're paying agencies and tools you can't evaluate, because nobody senior owns them.
 - You're entering a new market or launching a product and need a credible marketing plan fast.
 - You plan to hire a full-time CMO in a year or two and want the foundation, team, and metrics in place first.
@@ -136,7 +136,7 @@ When it's the wrong call: if the founders haven't yet figured out how to close t
 
 ## What changes when buyers research with AI?
 
-Your buyers now ask ChatGPT, Perplexity, Claude, and Google's AI Overviews which vendors to consider, long before they visit your site or fill in a form. If you're missing from that answer, you're missing from the shortlist. None of it shows up in your analytics.
+Your buyers now ask ChatGPT, Perplexity, Claude, and Google's AI Overviews which vendors to consider, long before they visit your site or fill in a form. If you're missing from that answer, you're missing from the shortlist. None of it shows up in your analytics. We describe this buyer in [The Buyer Who Already Knows](/blog/new-b2b-buyer-behavior/).
 
 That changes the fractional CMO job in three ways.
 
