@@ -11,7 +11,7 @@ toc_label: "In this guide"
 category: "Guide"
 date: 2026-11-24
 last_modified_at: 2026-11-24
-author: tim-dailey
+author: frank-days
 read_time: 9
 cta_title: "Need a fractional CMO who builds, not just advises?"
 cta_body: "We work with lean B2B tech teams that need senior marketing leadership and AI-era systems they own. Let's find out if there's a fit."
