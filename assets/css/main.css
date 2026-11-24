@@ -1654,6 +1654,74 @@ body {
 .subscribe-form__input:focus { border-color: var(--red); }
 .subscribe-form__input::placeholder { color: var(--brown); font-style: italic; }
 
+/* ── Guides strip (blog index) ── */
+.dispatch-guides {
+  padding: var(--space-8) 0;
+  background: var(--cream-dark);
+  border-bottom: 1px solid var(--rule);
+}
+
+.dispatch-guides__label {
+  font-family: var(--font-ui);
+  font-size: var(--text-ui-sm);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--brown);
+  margin-bottom: var(--space-5);
+}
+
+.dispatch-guides__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-5);
+}
+
+.dispatch-guide {
+  display: block;
+  padding: var(--space-6);
+  background: var(--bg);
+  border: 1.5px solid var(--dark);
+  text-decoration: none;
+  color: var(--dark);
+  transition: border-color var(--transition-fast);
+}
+
+.dispatch-guide:hover { border-color: var(--red); }
+.dispatch-guide:hover .dispatch-guide__title { color: var(--red); }
+
+.dispatch-guide__title {
+  font-family: var(--font-display);
+  font-size: var(--text-service);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-3);
+  transition: color var(--transition-fast);
+}
+
+.dispatch-guide__desc {
+  max-width: 680px;
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  line-height: 1.65;
+  color: var(--brown);
+  margin-bottom: var(--space-4);
+}
+
+.dispatch-guide__meta {
+  font-family: var(--font-ui);
+  font-size: var(--text-ui-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--red);
+}
+
+@media (max-width: 600px) {
+  .dispatch-guides__list { grid-template-columns: 1fr; }
+  .dispatch-guide { padding: var(--space-5); }
+}
+
 /* ── Featured issue ── */
 .dispatch-featured {
   padding: var(--space-9) 0;
